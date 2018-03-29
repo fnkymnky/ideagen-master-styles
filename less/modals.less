@@ -1,0 +1,110 @@
+.modal {
+
+	.modal-content {
+		.border-radius(2px, 2px, 2px, 2px);
+
+		.modal-header {
+			border-bottom:none;
+			overflow:auto;
+
+			.modal-avatar {
+				float:left;
+				margin:15px 20px 20px 15px;
+			}
+			.modal-title {
+				line-height:1;
+				margin-top:15px;
+			}
+
+			.modal-sub-title {
+				margin-top:5px;
+			}
+
+			.close {
+				padding:20px;
+			}
+		}
+
+		.modal-body {
+			padding:0 30px 30px;
+			font-size:14px;
+		}
+	}
+}
+
+.modal-backdrop {
+	background-color:#2b2c30;
+
+	&.in {
+		opacity:.9;
+	}
+}
+
+//
+// Modal Video
+//
+.modal-video {
+	.modal-video--close {
+		background:none;
+		display:inline-block;
+		float:right;
+
+		button.close {
+			height:44px;
+			width:63px;
+			opacity:1;
+
+			svg .cross {
+				fill:@grey;
+			}
+
+			&:hover {
+				svg .cross {
+					fill:@dark-grey;
+				}
+			}
+		}
+	}
+	.modal-video--player {
+		background:@white;
+		padding:5px;
+		clear:both;
+		.border-radius(4px, 0, 4px, 4px);
+	}
+	.modal-video--cta {
+		padding-top:20px;
+	}
+}
+
+//
+// Modal Form
+//
+.modal-form {
+	.modal-form--close {
+		background:none;
+		display:inline-block;
+		float:right;
+
+		button.close {
+			height:44px;
+			width:63px;
+			opacity:1;
+
+			svg .cross {
+				fill:@grey;
+			}
+
+			&:hover {
+				svg .cross {
+					fill:@dark-grey;
+				}
+			}
+		}
+	}
+	.modal-form--content {
+		background:@white;
+		padding:20px;
+		clear:both;
+		.border-radius(4px, 0, 4px, 4px);
+	}
+}

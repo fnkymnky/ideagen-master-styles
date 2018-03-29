@@ -1,0 +1,317 @@
+// ------------
+// FONT LOADING
+// ------------
+@font-face {
+    font-family: 'Lato Light';
+    src: url(../fonts/Lato/Lato-Light.ttf);
+}
+@font-face {
+    font-family: 'Lato';
+    src: url(../fonts/Lato/Lato-Regular.ttf);
+}
+@font-face {
+    font-family: 'Lato Bold';
+    src: url(../fonts/Lato/Lato-Bold.ttf);
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url(../fonts/Open_Sans/OpenSans-Regular.ttf);
+}
+@font-face {
+	font-family: 'Open Sans Semibold';
+	src: url(../fonts/Open_Sans/OpenSans-Semibold.ttf);
+}
+@font-face {
+    font-family: 'Open Sans Bold';
+    src: url(../fonts/Open_Sans/OpenSans-Bold.ttf);
+}
+@font-face {
+	font-family: 'FontAwesome';
+	src: url(../fonts/Font_Awesome/Font-Awesome.ttf);
+}
+
+@lato: 				      'Lato', Arial, Helvetica, sans-serif;
+@lato-light: 		      'Lato Light', Arial, Helvetica, sans-serif;
+@lato-bold:			      'Lato Bold', Arial, Helvetica, sans-serif;
+@open-sans: 		      'Open Sans', Arial, Helvetica, sans-serif;
+@open-sans-semibold:      'Open Sans Semibold', Arial, Helvetica, sans-serif;
+@open-sans-bold: 	      'Open Sans Bold', Arial, Helvetica, sans-serif;
+@font-awesome: 		      'FontAwesome';
+
+@font-x-small:		      11px;
+@font-small:		      14px;
+@font-medium:		      18px;
+@font-large:		      36px;
+@font-x-large:		      64px;
+
+@white: 			      #FFF;
+@light-grey: 		      #E7EAEC;
+@mid-grey:                #DBDEE0;
+@grey: 				      #A9A9A9;
+@dark-grey:               #333;
+
+@ideagen-blue: 		      #0A3254;
+@ideagen-lightest-blue:   #C6D8F1;
+@ideagen-light-blue:      #96B4DE;
+@ideagen-mid-blue:        #7ea6d7;
+@ideagen-orange: 	      #E94C28;
+@header-bg-color:     	  #FFF;
+@card-bg:                 #FFF;
+
+
+.site-header {
+    .site-header--global {
+    min-height:62px;
+
+        .site-header__logo {
+            float:left;
+            margin:15px 20px 15px;
+        }
+
+        .site-nav {
+            float:left;
+
+            .nav-col {
+                list-style:none;
+            }
+
+            .site-nav__dropdown-panel .nav-col {
+                list-style:none;
+            }
+        }
+        .site-header__search-form {
+            float:right;
+            margin-top:17px;
+
+            .site-header__search-form--input {
+                padding:5px 0 6px;
+                float:left;
+                margin-right:-4px;
+            }
+            .site-header__search-form--button {
+                padding:2px 10px 5px;
+                float:left;
+            }
+        }
+    }
+}
+
+#tab-navigation {
+    .product-logo {
+        float:left;
+        margin:17px 20px 17px 0;
+    }
+    .navbar {
+        float:left;
+    }
+    .btn-product-demo-req {
+        float:right;
+        margin:9px 0;
+    }
+}
+
+.carousel {
+    .slick-list {
+        position:relative;
+        z-index:0;
+    }
+}
+
+.carousel-slide {
+    background-position:center center;
+    background-repeat: no-repeat;
+    background-color:@dark-grey;
+    overflow:auto;
+
+    .slide-message {
+        float:left;
+        width:50%;
+        margin-top:80px;
+
+        &--heading {
+            margin-top:-3px!important;
+        }
+    }
+    .slide-graphic {
+        float:left;
+        width:50%;
+        margin-top:80px;
+    }
+}
+
+.featuredcontent {
+
+    .slick-track {
+        overflow:auto;
+        width:100%!important;
+    }
+
+    &-panel {
+        width:25%!important;
+        float:left;
+        min-height:200px;
+    }
+}
+
+// Column Sizes
+.col-4 {
+    width: 25%!important;
+    float:left;
+}
+
+.cardsection {
+    
+    .cardsection-grid {
+        overflow:auto;
+        width: 100%;
+        
+        .card-static {
+            min-height: 290px;
+        }
+
+        &--col-3,
+        &--col-4 {
+            float:left;
+        }
+    }
+}
+
+.card-product {
+    height: 380px;
+}
+.card-product--icon {
+    img[src$=".svg"] {
+        margin: 15px 0 0;
+        height: 90px;
+        width: 90px;
+    }
+}
+
+.card-list{ 
+    overflow:auto;
+
+    li {
+        display: table!important;
+    }
+    .card-horizontal {
+        width:100%;
+        float:left;
+        clear:both;
+
+            &--colleft {
+                text-align: center;
+                margin-bottom:10px;
+            }
+    }
+}
+
+.card-list-widget {
+    overflow: auto;
+    li {
+        display: table !important;
+    }
+    .card-horizontal {
+        width: 100%;
+        float: left;
+        clear: both;
+    }
+    .card-horizontal--colleft {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .card-horizontal--colright {
+        text-align: center;
+    }
+}
+
+ul.card-list-widget--blog-recent.card-list-widget {
+    .card-horizontal--colright {
+        margin-left: 0;
+    }
+}
+
+
+#content {
+    clear: both;
+}
+
+.job-header {
+    .job-details {
+        width: 80%;
+        float: left;
+    }
+    .job-apply {
+        width: 20%;
+        float: left;
+    }
+}
+
+.form-completion-card {
+    .card-content {
+        .card-timeline {
+            display:none;
+        }
+
+        .card-message {
+            float:left;
+
+            h2 {
+                margin-left:0;
+
+                &:before {
+                    display:none;
+                }
+            }
+        }
+    }
+
+    @media (min-width:768px) {
+        .card-advert {
+            float:left;
+        }
+    }
+}
+
+#tab-navigation {
+    .onpage-nav-logo,
+    .navbar {
+        float:left;
+    }
+    .onpage-nav-logo {
+        margin-top:12px;
+    }
+    .onpage-nav-cta {
+        float:right;
+        margin-top:10px;
+    }
+}
+
+.solution-header--form {
+    label {
+        font-size:14px;
+    }
+}
+
+.carousel--video {
+    .carousel--slide {
+        .carousel--quote {
+            display:block!important;
+        }
+        .carousel--slide-play {
+            text-align:center;
+            .play-video {
+                margin:0 auto;
+            }
+        }
+    }
+}
+
+.carousel--pager {
+    .slick-list {
+        .slick-track {
+            .carousel--pager-item {
+                float:left;
+            }
+        }
+    }
+}

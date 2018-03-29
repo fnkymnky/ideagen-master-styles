@@ -1,0 +1,185 @@
+// ------------
+// FONT LOADING
+// ------------
+@font-face {
+    font-family: 'Lato Light';
+    src: url(../fonts/Lato/Lato-Light.ttf);
+}
+@font-face {
+    font-family: 'Lato';
+    src: url(../fonts/Lato/Lato-Regular.ttf);
+}
+@font-face {
+    font-family: 'Lato Bold';
+    src: url(../fonts/Lato/Lato-Bold.ttf);
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url(../fonts/Open_Sans/OpenSans-Regular.ttf);
+}
+@font-face {
+	font-family: 'Open Sans Semibold';
+	src: url(../fonts/Open_Sans/OpenSans-Semibold.ttf);
+}
+@font-face {
+    font-family: 'Open Sans Bold';
+    src: url(../fonts/Open_Sans/OpenSans-Bold.ttf);
+}
+@font-face {
+	font-family: 'FontAwesome';
+	src: url(../fonts/Font_Awesome/Font-Awesome.ttf);
+}
+
+@lato: 				      'Lato', Arial, Helvetica, sans-serif;
+@lato-light: 		      'Lato Light', Arial, Helvetica, sans-serif;
+@lato-bold:			      'Lato Bold', Arial, Helvetica, sans-serif;
+@open-sans: 		      'Open Sans', Arial, Helvetica, sans-serif;
+@open-sans-semibold:      'Open Sans Semibold', Arial, Helvetica, sans-serif;
+@open-sans-bold: 	      'Open Sans Bold', Arial, Helvetica, sans-serif;
+@font-awesome: 		      'FontAwesome';
+
+@font-x-small:		      11px;
+@font-small:		      14px;
+@font-medium:		      18px;
+@font-large:		      36px;
+@font-x-large:		      64px;
+
+@white: 			      #FFF;
+@light-grey: 		      #E7EAEC;
+@mid-grey:                #DBDEE0;
+@grey: 				      #A9A9A9;
+@dark-grey:               #333;
+
+@ideagen-blue: 		      #0A3254;
+@ideagen-lightest-blue:   #C6D8F1;
+@ideagen-light-blue:      #96B4DE;
+@ideagen-mid-blue:        #7ea6d7;
+@ideagen-orange: 	      #E94C28;
+@header-bg-color:     	  #FFF;
+@card-bg:                 #FFF;
+
+
+.-idgbstp {
+    overflow: auto
+}
+
+.card-horizontal {
+    border:2px solid @mid-grey;
+
+    &:hover {
+       border: 2px solid lighten(@ideagen-blue, 15%);
+    }
+}
+
+.card-vertical {
+    border:2px solid @mid-grey;
+
+    &:hover {
+         border:2px solid lighten(@ideagen-blue, 15%);
+    }
+}
+
+.card-product {
+    border:2px solid @mid-grey;
+}
+
+.carousel-slide {
+    background:@ideagen-blue;
+    background-repeat: no-repeat;
+    background-position:center center;
+
+    .slide-message {
+
+        &__heading {
+            font-size:32px!important;
+        }
+    }
+}
+
+.wow {
+  visibility: visible!important;
+}
+
+.product-heading-container {
+    text-align:left;
+}
+
+.product-full-screen h1 {
+    font-size:34px!important;
+    padding-top:80px;
+}
+.product-icon-container {
+    text-align:center
+}
+.product-full-screen .product-icon-container .product-icon {
+    width:50%!important;
+}
+#product-header .site-logo {
+    position:relative!important;
+    margin:30px 0 0 30px!important;
+}
+
+
+/*CASE STUDY INDIVIDUAL FIXES*/
+.case-studies-individual .intro-effect-push .header {
+    position:relative;
+}
+.case-studies-individual .header {
+    height:680px!important;
+}
+.case-studies-individual .bg-img img {
+    position:relative;
+}
+.case-studies-individual .title {
+    left:0;
+}
+
+.scroll-down-btn,
+.scroll-down-btn:link,
+.scroll-down-btn:visited {
+    margin:0 50%;
+}
+.box-links-list li a:before,
+.box-links-list li a:hover:before,
+.block-callout-purple .box-links-list li a:before, 
+.blue-callout-section .box-links-list li a:before {
+    display:none;
+}
+
+.site-header--global {
+    position:fixed;
+    top:0;
+    z-index:250;
+    background:#fff;
+    width:100%;
+
+    .site-header__logo {
+        float:left;
+        margin:15px 20px 15px;
+    }
+
+    .site-nav {
+        float:left;
+        position:relative;
+        z-index:250;
+
+        .site-nav__dropdown-panel--solutions .nav-col {
+            width:280px;
+        }
+
+    }
+}
+
+.is-active.site-nav__overlay {
+    background-color:#000;
+    filter:alpha(opacity=50);
+
+}
+
+.site-nav .site-nav__primary-options li.has-dropdown .site-nav__dropdown-panel--solutions .site-nav__featured-content ul li {
+    width:280px!important;
+
+    img {
+        width:280px!important;
+    }
+}

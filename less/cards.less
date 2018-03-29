@@ -1,0 +1,893 @@
+// -----------------------------------------------------------------------------------
+// ---------------------- Section for cards to be used within ------------------------
+// -----------------------------------------------------------------------------------
+.cardsection {
+	text-align:center;
+	
+	&--heading h1 {
+		color:@ideagen-blue;
+		font-family:@lato;
+		font-weight:300;
+		font-size:42px;
+		
+		&:after {
+			border-bottom:1px solid @grey;
+			width:90px;
+			margin:10px auto;
+			display:block;
+			content:"";
+		}
+	}
+	&--subheading h4 {
+		color:@ideagen-blue;
+		font-family:@lato;
+		font-weight:300;
+		margin-bottom:30px;
+	}
+	.cardsection-grid {
+		display: table;        	   /* IE < 10, Opera *Presto* Desktop (Now dead) */
+		display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  		display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  		display: -ms-flexbox;      /* TWEENER - IE 10 */
+  		display: -webkit-flex;     /* NEW - Chrome */
+  		display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */ 
+		flex-wrap:wrap;
+		margin-left:-15px;
+		margin-right:-15px;
+
+		&--col-3 {
+			width:100%;
+			padding:7px 14px;
+			display: table;            /* IE < 10, Opera *Presto* Desktop (Now dead) */
+			display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  			display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  			display: -ms-flexbox;      /* TWEENER - IE 10 */
+  			display: -webkit-flex;     /* NEW - Chrome */
+  			display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */ 
+		}
+
+		&--col-4 {
+			width:100%;
+			padding:7px 14px;
+			display: table;            /* IE < 10, Opera *Presto* Desktop (Now dead) */
+			display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  			display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  			display: -ms-flexbox;      /* TWEENER - IE 10 */
+  			display: -webkit-flex;     /* NEW - Chrome */
+  			display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */ 
+		}
+	}
+}
+
+
+
+
+
+// -----------------------------------------------------------------------------------
+// ------------------------ Generic Card Styling For Lists ---------------------------
+// -----------------------------------------------------------------------------------
+.card-listitem {
+	background:@white;
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	// transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+	display: table;            /* IE < 10, Opera *Presto* Desktop (Now dead) */
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  	display: -ms-flexbox;      /* TWEENER - IE 10 */
+  	display: -webkit-flex;     /* NEW - Chrome */
+  	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */  
+	flex-direction: column;
+	width:100%;
+}
+
+
+// -----------------------------------------------------------------------------------
+// ------------------- Generic Card Styling For Static Cards/Ads ---------------------
+// -----------------------------------------------------------------------------------
+.card-static {
+	background:@white;
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	// transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+	display: table;            /* IE < 10, Opera *Presto* Desktop (Now dead) */
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  	display: -ms-flexbox;      /* TWEENER - IE 10 */
+  	display: -webkit-flex;     /* NEW - Chrome */
+  	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */  
+	flex-direction: column;
+	width:100%;
+	margin-bottom:20px;
+
+
+	h1, h2, h3, h4,	h5,	h6 {
+		margin-top:10px;
+	}
+
+	h1:first-child, 
+	h2:first-child, 
+	h3:first-child, 
+	h4:first-child, 
+	h5:first-child, 
+	h6:first-child {
+		margin-top:0;
+	}
+
+	&--icon img {
+		margin-bottom:14px;
+	}
+
+	&--title {
+		font-size:20px;
+		line-height:1.1;
+	}
+
+	&--description {
+		font-size:14px;
+	}
+
+	&-advert {
+		background-color: @ideagen-blue; // Fallback for IE8 - Doesn't show the BG image.
+		color:@white;
+		background-position:center center;
+		background-size:cover;
+		overflow: auto;
+		position: relative;
+		padding-top:100px;
+		border:2px solid @ideagen-blue;
+
+		&:hover {
+			border-color:@ideagen-orange;
+			.softAnimate();
+		}
+
+		&--link {
+			.link-card();
+
+			font-family: @lato;
+			font-weight:300;
+			font-size:28px;
+			padding:0 20px 16px 20px;
+			color:@white;
+			line-height:1.2;
+
+			& a {
+				color:@white;
+			}
+		}
+
+		&.company-benefits-advert {
+			background-image:@blue-overlay, url(/_assets/backgrounds/careers/benefits-and-rewards-banner-ad.jpg);
+		}
+
+		&.meet-our-people-advert {
+			background-image:@blue-overlay, url(/_assets/backgrounds/careers/meet-our-people-banner-ad.jpg);
+		}
+	}
+}
+
+// -----------------------------------------------------------------------------------
+// --------------------------- Vertical Cards for Solutions --------------------------
+// -----------------------------------------------------------------------------------
+.card-vertical {
+	position:relative;
+	border:2px solid @white;
+	transition: border .1s ease-in-out;
+
+	&:hover {
+		border-color:lighten(@ideagen-blue, 15%);
+	}
+	&:focus, &:active {
+		border-color:@ideagen-orange;
+	}
+	
+	&--title p {
+		font-size:20px;
+		padding:14px 14px;
+		margin:0;
+		min-height:92px;
+	}
+
+	&--single-title p {
+		font-size:20px;
+		padding:14px 14px;
+		margin:0;
+	}
+
+	&--title-lg p {
+		font-size:20px;
+		padding:14px 14px 0;
+		margin:0;
+	}
+	
+	&--link {
+		display:block;
+		padding:14px 0;
+		font-size:14px;
+		margin-bottom:0;
+		border-top:1px solid @light-grey;
+		text-transform:uppercase;
+
+		.link-card();
+		.softAnimate();
+
+		a {
+			color:@dark-grey;
+		}
+		&:focus, &:active {
+			text-decoration: none;
+		}
+	}
+	
+	&--icon {
+		height:60px;
+		width:60px;
+		margin:14px auto 0;
+		
+		img {
+			height:60px;
+			width:60px;
+		}
+	}
+
+	&.solutions-filter {
+
+	}
+}
+
+// -----------------------------------------------------------------------------------
+// ------------------ Horizontal Listing Cards (News, Blogs, Vacancies) --------------------
+// -----------------------------------------------------------------------------------
+.card-horizontal {
+	margin-bottom:10px;
+	display: table;        /* IE < 10, Opera *Presto* Desktop (Now dead) */
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  	display: -ms-flexbox;      /* TWEENER - IE 10 */
+  	display: -webkit-flex;     /* NEW - Chrome */
+  	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */  
+	flex-direction:row;
+	position:relative;
+	border:2px solid @white;
+
+	transition: border .1s ease-in-out;
+
+	&:hover {
+	    // -moz-box-shadow: 0 7px 14px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.16);
+	    // box-shadow: 0 7px 14px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.16);
+		border-color:lighten(@ideagen-blue, 15%);
+	}
+	&:active, &:focus {
+		border-color: @ideagen-orange;
+		underline:none;
+	}
+
+	&--colleft {
+		margin-right:20px;
+		min-width: 40px;
+	}
+
+	&--colright {
+		-ms-flex: 0 1 auto;
+	}
+
+	&--headshot {
+		border-radius:50%;
+		margin-right:20px;
+	}
+
+	&--categorylabel {
+		font-size:@font-x-small;
+		margin:0;
+
+		&:before {
+			content:"\f02e";
+			font-family:@font-awesome;
+			margin-right:5px;
+			color:@grey;
+		}
+	}
+
+	&--title {
+		font-size:@font-medium;
+		margin:0;
+
+		.link-card();
+
+		a { 
+			color:@dark-grey;
+		}
+	}
+
+	&--author {
+		font-size:@font-x-small;
+	}
+
+	&--dateday, &--datemonth {
+		font-family:@lato;
+		font-weight:700;
+		margin:0 auto;
+		display:block;
+		text-align:center;
+		width:42px;
+	}
+	&--dateday {
+		line-height:32px;
+		font-size:@font-large;
+	}
+	&--datemonth {
+		font-size:@font-medium;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+	}
+}
+
+
+
+// -----------------------------------------------------------------------------------
+// -------------------------------- Product Cards ------------------------------------
+// -----------------------------------------------------------------------------------
+.card-product {
+	position:relative;
+	transition: border .1s ease-in-out;
+	padding-bottom:98px;
+	
+	&--title p {
+		font-size:30px;
+		padding:14px 14px 5px;
+		margin:0;
+		line-height: 36px;
+	}
+	
+	&--description p { 
+		min-height:40px;
+		padding:0 30px 10px;
+		font-size: 16px;
+	}
+
+	&--link-options {
+		position:absolute;
+		font-size:14px;
+		left:0;
+		bottom:0;
+		right:0;
+		margin-bottom:0;
+		text-transform:uppercase;
+
+		a {
+			color:@dark-grey;
+			display:block;
+			padding:14px 0;
+			border-top:1px solid @light-grey;
+			.softAnimate();
+
+			&:hover {
+				background: @ideagen-blue;
+				color:@white;
+			}
+
+			&:focus, &:active {
+				text-decoration: none;
+			}
+		}
+	}
+	
+	&--icon {
+		margin:14px auto 0;
+		height:60px;
+		width:60px;
+
+		img {
+			height:60px;
+			width:60px;
+		}
+	}
+}
+
+
+
+
+// -----------------------------------------------------------------------------------
+// ---------- Card List Widgets (used on homepage and in page widgets) ---------------
+// -----------------------------------------------------------------------------------
+ul.card-list-widget {
+	padding:0;
+	margin:0;
+	list-style:none;
+
+	&.card-list-widget--blog-recent {
+
+		// Hide all items on mobile, to then allow the nth-child psudo to show only 2
+		li {
+			display:none; 
+		}
+
+		.card-horizontal {
+			&--colleft {
+				min-width:60px;
+				margin-right:0;
+				
+				img {
+					border-radius:50%;
+				}
+			}
+			&--colright {
+				margin-left:20px;
+			}
+		}
+
+		// Show only the first 2 blog items on mobile
+		li:nth-child(1), li:nth-child(2) {
+			display: table;            /* IE < 10, Opera *Presto* Desktop (Now dead) */
+			display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  			display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  			display: -ms-flexbox;      /* TWEENER - IE 10 */
+  			display: -webkit-flex;     /* NEW - Chrome */
+  			display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */  
+		}
+	}
+
+	&.card-list--news-recent {
+
+		// Hide all items on mobile, to then allow the nth-child psudo to show only 2
+		li {
+			display:none; 
+		}
+
+		// Show only the first 2 news items on mobile
+		li:nth-child(1), li:nth-child(2) {
+			display: table;            /* IE < 10, Opera *Presto* Desktop (Now dead) */
+			display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  			display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  			display: -ms-flexbox;      /* TWEENER - IE 10 */
+  			display: -webkit-flex;     /* NEW - Chrome */
+  			display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */  
+		}
+	}
+}
+
+// -----------------------------------------------------------------------------------
+// ---------- Card List Widgets (used on homepage and in page widgets) ---------------
+// -----------------------------------------------------------------------------------
+
+.card-list--vacancies {
+	padding:0;
+	margin-bottom:30px;
+	height:auto!important;
+
+	.card-horizontal {
+		display:block;
+		.link-card();
+
+		a {
+			z-index:10;
+		}
+
+		.card-horizontal--title {
+			font-size:18px;
+			margin:0 0 10px;
+			line-height:1.2;
+		}
+
+		ul.card-horizontal--details {
+			padding:0;
+			list-style:none;
+			z-index:1;
+		}
+	}
+
+	// td {
+	// 	padding-right:20px;
+	// }
+}
+
+
+.benefits-and-rewards-grid {
+	margin:0;
+	padding:0;
+
+	li .card-static {
+		margin-bottom:0;
+	}
+}
+
+
+// -----------------------------------------------------------------------------------
+// ------------------------------ Product Text Colours -------------------------------
+// -----------------------------------------------------------------------------------
+.product-font {
+	font-family: @roboto;
+	font-weight: 800;
+
+	&--qpulse {
+		color: @qpulse-purple;
+	}
+	&--pleasereview {
+		color: @pleasereview-yellow;
+	}
+	&--pentana {
+		color: @pentana-blue;
+	}
+	&--coruson {
+		color: @coruson-blue;
+	}
+	&--dart {
+		color: @dart-green;
+	}
+	&--easysite {
+		color: @easysite-blue;
+	}
+	&--academy {
+		color: @academy-orange;
+	}
+}
+
+
+// -----------------------------------------------------------------------------------
+// ----------------------------------- Card Filters ----------------------------------
+// -----------------------------------------------------------------------------------
+.cardsection-filter {
+
+	.cardsection-filter--label p {
+		color:@dark-grey;
+		font-family: @open-sans;
+		font-weight: 700;
+		margin:0;
+		display:none;
+	}
+
+	.cardsection-filter--controls {
+		display:none;
+	}
+
+    .cardsection-filter--mobilecontrols {
+        position: relative;
+        list-style:none;
+        margin:10px 0 20px 0;
+        padding:0;
+        background:@ideagen-blue;
+        color:@white;
+        text-align:left;
+        -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    
+    	.filter-dropdown-link {
+    		
+    		> a {
+    			padding:14px 20px;
+    		}	
+
+		    > a:after {
+	        	content:"\f0d7";
+	        	display:block;
+	        	font-family: @font-awesome;
+	        	font-size:12px;
+	        	color:@white;
+	        	float:right;
+	        	margin-top:3px;
+	        }
+    	}
+    	.filter-dropdown-list {
+			list-style:none;
+			padding:0;
+			margin:0;
+			background:lighten(@ideagen-blue, 5%);
+	
+			li a {
+				padding:14px;
+
+	    		&:hover, &:active, &:focus {
+	    			cursor: pointer!important;
+	    			background:lighten(@ideagen-blue, 15%);
+	    		}
+
+	    	}
+    	}
+
+    	a {
+    		color:@white;
+    	}
+
+	    > a {
+	        display: none;
+	    }
+	    > li a {
+	       
+	    }
+	    li {
+	        position: relative;
+	    }
+	    > ul {
+	        height: 3.75em;
+	    }
+	    > ul > li {
+	        width: 25%;
+	        height: 100%;
+	        float: left;
+	    }
+	 
+	    li ul
+	    {
+	        display: none;
+	        position: absolute;
+	        top: 100%;
+	    }
+	    
+	    li:hover ul {
+	        display: block;
+	    }
+
+		:not( :target ) > a:first-of-type,
+		:target > a:last-of-type {
+		    display: block;
+		}
+
+		> ul {
+	        height: auto;
+	        display: none;
+	        position: absolute;
+	        left: 0;
+	        right: 0;
+	    }
+	    :target > ul {
+	        display: block;
+	    }
+	    > ul > li {
+	        width: 100%;
+	        float: none;
+	    }
+
+	    li ul {
+	        position: static;
+	    }
+    }
+}
+
+// -----------------------------------------------------------------------------------
+// ----------------------------- Responsive Breakpoints ------------------------------
+// -----------------------------------------------------------------------------------
+
+// -- 480px and up
+@media (min-width: 480px) {
+	.cardsection {
+
+		.cardsection-grid {
+			
+			&--col-4 {
+				width:50%;
+				padding:14px 14px;
+			}
+		}
+	}
+}
+
+// Responsive Breakpoints
+// -- 768px and up
+@media (min-width: 768px) {
+	.cardsection {
+
+		&--subheading h4 {
+			margin-bottom:40px;
+		}
+
+		.cardsection-grid {
+			
+			&--col-3 {
+				width:33.33333333%;/*Fallback*/
+				width: calc(100% / 3);
+				padding:14px;
+			}
+		}
+	}
+
+	ul.card-list-widget {
+
+		&.card-list-widget--blog-recent {
+
+			// Show all available blog items for tablet (limited to 2 on mobile)
+			li {
+				display: table;        /* IE < 10, Opera *Presto* Desktop (Now dead) */
+				display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  				display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  				display: -ms-flexbox;      /* TWEENER - IE 10 */
+  				display: -webkit-flex;     /* NEW - Chrome */
+  				display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */ 
+			}
+		}
+		
+		&.card-list-widget--news-recent {
+
+			// Show all available news items for tablet (limited to 2 on mobile)
+			li {
+				display: table;        /* IE < 10, Opera *Presto* Desktop (Now dead) */
+				display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  				display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  				display: -ms-flexbox;      /* TWEENER - IE 10 */
+  				display: -webkit-flex;     /* NEW - Chrome */
+  				display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */ 
+			}
+		}
+	}
+	.card-list--vacancies {
+		.card-horizontal {
+			
+			.card-horizontal--title {
+				font-size:20px;
+			}
+		}
+	}
+	.card-vertical {
+		
+		&--title p {
+			font-size:20px;
+			padding:18px 30px;
+			min-height:92px;
+		}
+
+		&--icon {
+			margin:30px auto 0;
+			height:90px;
+			width:90px;
+
+			img {
+				height:90px;
+				width:90px;
+			}
+		}
+	}
+
+	.card-product {
+		
+		&--icon {
+			margin:30px auto 0;
+			height:100px;
+			width:100px;
+
+			img {
+				height:100px;
+				width:100px;
+			}
+		}
+	}
+
+	.cardsection-filter {
+    	margin-bottom:14px;
+    	font-size:14px;
+		background: @ideagen-blue;
+		color:@white;
+		display: table;            /* IE < 10, Opera *Presto* Desktop (Now dead) */
+		display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	  	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	  	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	  	display: -webkit-flex;     /* NEW - Chrome */
+	  	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */ 
+	  	align-items: center;
+	  	flex-direction:row;
+	  	justify-content:space-between;
+    	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+		.cardsection-filter--label p {
+			color:@white;
+			display:flex;
+			padding-left: 30px;
+			text-align: left;
+		}
+
+		.cardsection-filter--controls {
+			display:flex;
+			justify-content:space-between;
+			background:@ideagen-blue;
+			font-size:16px;
+
+			button {
+				border:0;
+				background:@ideagen-blue;
+				color:@white;
+				padding:30px 32px;
+				.softAnimate();
+
+				&:hover {
+					background:lighten(@ideagen-blue, 5%);
+				}
+
+				&.is-checked {
+					background:@white;
+					color:@ideagen-blue;
+				}
+			}
+		}
+
+		.cardsection-filter--mobilecontrols {
+			display:none;
+		}
+	}
+}
+
+
+// -- 992px and up
+@media (min-width: 992px ) {
+
+	.cardsection {
+
+		.cardsection-grid {
+			
+			&--col-4 {
+				width:33.33333333%;/*Fallback*/
+				width: calc(100% / 3);
+			}
+		}
+	}
+
+	.card-vertical {
+		
+		&--title p {
+			min-height:120px;
+		}
+	}
+
+	.cardsection-filter {
+
+		.cardsection-filter--controls {
+
+			button {
+				border:0;
+				background:@ideagen-blue;
+				color:@white;
+				padding:30px 26px;
+				.softAnimate();
+
+				&:hover {
+					background:lighten(@ideagen-blue, 5%);
+				}
+
+				&.is-checked {
+					background:@white;
+					color:@ideagen-blue;
+				}
+			}
+		}
+	}
+
+}
+
+// -- 1200px and up
+@media (min-width: 1200px ) {
+
+	.cardsection {
+
+		.cardsection-grid {
+			
+			&--col-4 {
+				width:25%;
+			}
+		}
+	}
+
+	.card-vertical {
+		
+		&--title p {
+			min-height:148px;
+		}
+	}
+
+	.cardsection-filter {
+		font-size:16px;
+
+		.cardsection-filter--controls {
+			button {
+				padding:30px 30px;
+			}
+		}
+	}
+}
+
+@media (min-width:1300px) {
+	.card-vertical {
+		
+		&--title p {
+			min-height:120px;
+		}
+	}
+}

@@ -1,0 +1,315 @@
+body.nav-open {
+	overflow:hidden;
+}
+
+.site-header {
+	
+	.site-header__logo {
+		padding:0 20px;
+	}
+
+	.site-header__search-form {
+		width:100%;
+		position:absolute;
+		display:flex;
+		padding:25px;
+		top:74px;
+		left:0;
+		right:0;
+		background:@white;
+		transition-property: opacity, visibility;
+		transition-duration: .4s, .4s;
+
+		&.is-open {
+			visibility: visible;
+			opacity: 1;
+		}
+
+		&.is-closed {
+			visibility: hidden;
+			opacity: 0;
+		}
+
+		.site-header__search-form--input {
+			width:100%;
+			background:@search-background;
+			border-top:1px solid @search-border;
+			border-right:none;
+			border-bottom:1px solid @search-border;
+			border-left:1px solid @search-border;
+			font-size:16px;
+			padding:10px 20px;
+			.border-radius(100px,100px,100px,100px);
+			margin-right:-64px;
+		}
+
+		.site-header__search-form--button {
+			background:@search-background;
+			border-top:1px solid @search-border;
+			border-right:1px solid @search-border;
+			border-bottom:1px solid @search-border;
+			border-left:none;
+			font-size: 18px;
+			.border-radius(0,100px,0,100px);
+			width:64px;
+			height:54px;
+			color:@ideagen-blue;
+		}
+	}
+}
+
+nav.site-nav {
+	margin-left:auto;
+}
+
+.site-nav__options-contain {
+	position: relative;
+}
+
+.site-nav__primary-options {
+	position:fixed;
+	top:1px;
+	bottom:0;
+	left:0;
+	right:0;
+	background:@white;
+	visibility:hidden;
+	opacity:0;
+	overflow-y:auto;
+	overflow-x:hidden;
+	padding:0;
+	margin:73px 0 0;
+	list-style:none;
+	transition-property:opacity, visibility;
+	transition-duration:.4s, .4s;
+
+	&.is-open {
+		visibility:visible;
+		opacity:1;
+	}
+
+	ul {
+		list-style: none;
+		padding:0;
+		margin:0;
+	}
+
+	> li {
+
+		> a {
+			padding:20px;
+			border-bottom:1px solid @menu-subtle-grey;
+			display:block;
+			font-size:20px;
+			font-weight: 700;
+			color:@ideagen-blue;
+		}
+
+		&.has-dropdown {
+
+			> a {
+				background-image:url('../img/utilities/mobile-dropdown-panel-arrow.png');
+				background-position: right 20px center;
+				background-repeat: no-repeat;
+			}
+			.site-nav__dropdown-panel {
+				background:@white;
+				position: fixed;
+				left:100%;
+				top:74px;
+				bottom:0;
+				overflow-y:auto;
+				width:100%;
+			    transition: left .4s;
+
+				.site-nav__mobile-controls {
+					border-bottom:1px solid @menu-subtle-grey;
+					position:relative;
+
+					.site-nav__mobile-controls--fixed {
+						position:fixed;
+						left:100%;
+						width:100%;
+						background:@white;
+						border-bottom: 1px solid @menu-subtle-grey;
+						transition: left, .4s;
+						z-index:700;
+					}
+				}
+
+				.site-nav__mobile-controls--back-btn,
+				.site-nav__mobile-controls--product-back-btn {
+					border:none;
+					border-right:1px solid @menu-subtle-grey;
+					background:@white;
+					padding:25px;
+					text-transform:uppercase;
+					font-size:12px;
+					line-height:1;
+					color:@ideagen-blue;
+
+					.fa {
+						font-size:14px;
+					}
+				}
+
+				> ul > .site-nav__dropdown-panel-title {
+					padding-top:65px;
+				}
+
+				.site-nav__dropdown-panel-title {
+					> a {
+						font-size:20px;
+						font-weight:700;
+						padding:20px;
+					}
+				}
+
+				> ul {
+					border-left:4px solid @ideagen-light-blue;
+				}
+
+				.nav-col {
+					a {
+						padding-left:30px;
+					}
+				}
+
+				.site-nav__product-description {
+					display:block;
+					color:#666;
+					font-size:11px;
+				}
+
+				a {
+					padding:15px;
+					display: block;
+					border-bottom: 1px solid @menu-subtle-grey;
+					color:@ideagen-blue;
+					font-size:16px;
+				}
+
+				.has-slideout {
+					position:relative;
+					
+					.has-slideout__expand-btn {
+						position:absolute;
+						top:0;
+						right:0;
+						font-size:14px;
+						color:@ideagen-blue;
+						padding:17px 25px 16px;
+						border:none;
+						border-left:1px solid @menu-subtle-grey;
+						background:none;
+
+						&:focus {
+							background:@menu-highlight-blue;
+						}
+					}
+
+					.site-nav__slideout-panel {
+						display:none;
+						z-index:400;
+						background:@menu-highlight-blue;
+
+						.site-nav__dropdown-panel-title > a{
+							display:none;
+						}
+
+						.site-nav__dropdown-panel-title > ul li a {
+							padding-left:40px;
+						}
+					}
+
+					&.is-open {
+						.site-nav__slideout-panel {
+							display:block;
+						}					
+					}
+				}
+
+				&.site-nav__dropdown-panel--products {
+					.has-slideout {
+						position:initial;
+
+						> a {
+							background-image:url('../img/utilities/mobile-dropdown-panel-arrow.png');
+							background-position: right 20px center;
+							background-repeat: no-repeat;
+						}
+
+						.site-nav__slideout-panel {
+							position:fixed;
+							display:block;
+							overflow-y:auto;
+							left:100%;
+							top:74px;
+							background:@white;
+							z-index:800;
+							bottom:0;
+							width:100%;
+							transition: left, .4s;
+
+							.nav-col {
+								border-left:4px solid @ideagen-light-blue;
+							}
+						}
+						&.is-open {
+							.site-nav__slideout-panel { 
+								left:0;
+								transition: left, .4s;
+							}
+						}
+					}
+				}
+			}
+
+			// When dropdown is open
+			&.is-open {
+				.site-nav__dropdown-panel {
+					left:0;
+				    transition: left, .4s;
+
+				    .site-nav__mobile-controls {
+				    	.site-nav__mobile-controls--fixed {
+							left:0;
+						    transition: left, .4s;
+				    	}
+				    }
+				}
+				> a {
+					background-color:@menu-highlight-blue;
+					background-image:url('../img/utilities/mobile-dropdown-panel-arrow-active.png');
+					background-position: right 20px center;
+					background-repeat: no-repeat;
+				}
+			}
+		}
+		.products-label {
+			display:none;
+		}
+		.product-logo {
+			display:none;
+		}
+	}
+}
+.site-nav__mobile-nav-btn,
+.site-nav__mobile-search-btn {
+	padding:25px;
+	line-height:1;
+	font-size:22px;
+	border:0;
+	float:left;
+	background:@white;
+	border-left:1px solid @menu-subtle-grey;
+	color:@ideagen-blue;
+
+	&.is-active {
+		background:@menu-highlight-blue;
+		-webkit-box-shadow: inset 0px 4px 0px 0px @ideagen-blue;
+		-moz-box-shadow: inset 0px 4px 0px 0px @ideagen-blue;
+		box-shadow: inset 0px 4px 0px 0px @ideagen-blue;
+	}
+}
+

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="idg-check-icon">
+  <defs/>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <circle class="cls-1" cx="10" cy="10" r="10" fill="#ffffff"/>
+      <circle cx="10" cy="10" r="7.5" fill="#1abc11"/>
+      <path class="cls-1" d="M14.18 8.43l-4 4.05-.76.76a.56.56 0 0 1-.76 0l-.76-.76-2-2a.56.56 0 0 1 0-.76l.76-.76a.56.56 0 0 1 .76 0L9 10.58l3.67-3.67a.56.56 0 0 1 .76 0l.76.76a.56.56 0 0 1 0 .76z" fill="#ffffff" />
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,519 @@
+// CONTENTS
+// - Site Header
+// - Site Variant - On-Page
+// - Site Variant - On-Page - Product Colours
+
+.content-container {
+	padding-top:123px;
+}
+
+
+.site-header {
+	.site-header--on-page {
+		background:@ideagen-blue;
+		padding:10px 0;
+		width:100%;
+		display: flex;
+		flex-direction:row;
+		align-items:center;
+
+		ul {
+			list-style:none;
+			padding:0;
+			margin:0;
+
+			li {
+				padding:0;
+				margin:0;
+				display:inline-block;
+			}
+		}
+
+		a {
+			color:@white;
+		}
+
+		nav.on-page-nav {
+			font-size:14px;
+			margin-left:20px;
+
+			a {
+				padding:22px 20px;
+
+				&:hover {
+					background:darken(@qpulse-purple, 18%)
+				}
+			}
+		}
+
+		&.site-header--on-page--q-pulse {
+			background:darken(@qpulse-purple, 15%);
+			color:@white;
+		}
+	}
+
+	.site-header__logo {
+		margin-right:20px;
+		height:30px;
+		padding:0;
+	}
+
+	.site-header__demo-btn {
+		margin-left:auto;
+		font-size:14px;
+		padding:10px 24px;
+	}
+}
+
+.site-nav {
+	font-size:14px;
+
+	ul {
+		list-style:none;
+		padding:0;
+		margin:0;
+	}
+
+	a {
+		color:@ideagen-blue;
+		cursor: pointer;
+	}
+
+	.site-nav__primary-options {
+		display:block;
+
+		> li {
+			display:inline-block;
+			float:left;
+			line-height:0.8;
+
+			> a {
+			 	display:block;
+			 	padding:25px 20px 21px;
+			 	border-bottom:4px solid @white;
+			 	height:60px;
+
+			 	&:hover {
+			 		background-color:@menu-hover-blue;
+			 		border-color:#b4c3d5;
+			 	}
+
+			 	&:focus {
+			 		text-decoration: none;
+			 	}
+
+			 	&:after {
+			 		color:@ideagen-blue;
+			 	}
+			}
+		}
+
+		li.has-dropdown {
+			> a {
+				padding-bottom:20px;
+
+				&:after {
+			 		content:"\f0d7";
+			 		font-family: @font-awesome;
+					color:@menu-subtle-grey;
+					margin-left:8px;
+				}
+				&:hover:after {
+					color:@ideagen-blue;
+				}
+			}
+
+			.site-nav__dropdown-panel {
+				display:flex;
+				position:absolute;
+				z-index:250;
+				padding-bottom:126px;
+				background-color:@white;
+				border-top:1px solid @menu-subtle-grey;
+				border-bottom:4px solid @ideagen-mid-blue;
+
+				ul > li {
+					display:block;
+				}
+
+				.site-nav__mobile-controls {
+					display:none;
+				}
+
+				.site-nav__dropdown-panel-title > a {
+					display:block;
+					padding:20px 20px 15px;
+					font-size:20px;
+					font-weight:700;
+
+					&:hover {
+						text-decoration: underline;
+						text-shadow: 1px 1px 0 #fff, -1px 1px 0 #fff, 2px 0 0 #fff, -2px 0 0 #fff;
+					}
+				}
+
+				.nav-col {
+					margin-left:2px;
+					margin-bottom:20px;
+					line-height:1.4;
+
+					&:first-of-type {
+						margin-left:0;
+					}
+
+					> li > a {
+						border-left:4px solid @white;
+						padding:10px 20px 10px 16px;
+						display:block;
+
+						&:hover {
+							background-color:@menu-hover-blue;
+							border-color:@menu-subtle-grey;
+						}
+
+						&:focus,
+						&:focus:hover, {
+							background-color:@menu-highlight-blue;
+							border-color:@ideagen-blue;
+							text-decoration:none;
+						}
+					}
+				}
+
+				.site-nav__product-description {
+					display:block;
+					color:#666;
+					font-size:11px;
+				}
+
+				.site-nav__featured-content {
+					display:block;
+					position:absolute;
+					bottom:0;
+					left:0;
+					clear:both;
+					border-top:6px solid @menu-subtle-grey;
+
+					img {
+						max-width:100%;
+					}
+
+					ul li {
+						display:inline-block;
+						float:left;
+						margin-left:2px;
+						padding:0;
+						width:300px;
+
+						&:first-child {
+							margin-left:0;
+						}
+					}
+				}
+
+				.has-slideout {
+
+					> a {
+						background-image:url(../img/utilities/desktop-dropdown-panel-arrow.png);
+						background-repeat:no-repeat;
+						background-position: right center;
+
+						&:hover {
+							background-image:url(../img/utilities/desktop-dropdown-panel-arrow-hover.png);
+						}
+					}
+
+					.site-nav__slideout-panel {
+						width:300px;
+						position:absolute;
+						left:100%;
+						top:0;
+						padding-bottom:126px;
+
+						background-color:@menu-highlight-blue;
+						border-bottom:4px solid @ideagen-mid-blue;
+
+						// .box-shadow(0px 2px 16px 0px rgba(0,0,0,0.15));
+
+						.site-nav__dropdown-panel-title {
+							
+							> a {
+								line-height:0.8;
+
+								&:hover {
+								text-shadow:1px 1px 0 @menu-highlight-blue, 
+								    		-1px 1px 0 @menu-highlight-blue, 
+									    	2px 0 0 @menu-highlight-blue, 
+										    -2px 0 0 @menu-highlight-blue;
+								}
+							}
+
+						}
+
+						.nav-col {
+							margin-left: 0;
+
+							li > a {
+								border-color:@menu-highlight-blue;
+							
+
+								&:hover {
+									background-color:darken(@menu-highlight-blue, 5%);
+									border-color:@ideagen-blue;
+								}
+							}
+						}
+
+						.site-nav__featured-content {
+							border-color:#b4c3d5;
+						}
+
+
+
+						&.site-nav__slideout-panel--qpulse {
+							background:url(../img/navigation/products/q-pulse-product-background-nav.jpg) no-repeat top left @qpulse-purple;
+							color:@white;
+							padding-bottom:0;
+
+							img.product-logo {
+								margin:20px 0 30px 20px;
+								display:block;
+							}
+
+							span.products-label {
+								text-transform: uppercase;
+								color:lighten(@qpulse-purple, 30%);
+								margin:0 0 5px 20px;
+								font-size:11px;
+								display:block;
+							}
+
+							.nav-col {
+								padding-bottom:126px;
+
+								li > a {
+									border:none;
+									padding:10px 20px;
+									color:@white;
+									font-weight:700;
+									font-size:18px;
+
+									sup {
+										font-size:12px;
+									}
+
+									&:hover,
+									&:focus {
+										background-color:darken(@qpulse-purple, 15%);
+										background-color:rgba(48, 23, 77, 0.4);
+									}
+
+									.site-nav__product-description {
+										color:@white;
+										font-weight:normal;
+									}
+								}
+							}
+
+							.site-nav__featured-content { 
+								border-color:darken(@qpulse-purple, 15%);
+							}
+						}
+
+						&.site-nav__slideout-panel--pentana {
+							background:url(../img/navigation/products/pentana-product-background-nav.jpg) no-repeat top left @pentana-blue;
+							color:@white;
+
+							img.product-logo {
+								margin:20px 0 30px 20px;
+								display:block;
+							}
+
+							span.products-label {
+								text-transform: uppercase;
+								color:lighten(@pentana-blue, 40%);
+								margin:0 0 5px 20px;
+								font-size:11px;
+								display:block;
+							}
+
+							.nav-col {
+								padding-bottom:126px;
+
+								li > a {
+									border:none;
+									padding:10px 20px;
+									color:@white;
+									font-weight:700;
+									font-size:18px;
+
+									sup {
+										font-size:12px;
+									}
+
+									&:hover,
+									&:focus {
+										background-color:darken(@pentana-blue, 15%);
+										background-color:rgba(23, 44, 83, 0.4);
+									}
+
+									.site-nav__product-description {
+										color:@white;
+										font-weight:normal;
+									}
+								}
+							}
+
+							.site-nav__featured-content {
+								border-color:darken(@pentana-blue, 15%)
+							}
+						}
+					}
+
+					// When slideout is closed
+					&.is-closed {
+						.site-nav__slideout-panel {
+							display:none;
+						}
+					}
+					// When slideout is open
+					&.is-open {
+						
+						> a {
+							background-color:@menu-highlight-blue;
+							border-color:@ideagen-blue;
+							background-image:url(../img/utilities/desktop-dropdown-panel-arrow-hover.png);
+							background-repeat:no-repeat;
+							background-position: right center;
+
+							&:hover {
+								background-color:@menu-highlight-blue;
+								border-color:@ideagen-blue;
+							}
+						}
+
+						.site-nav__slideout-panel {
+							display:block;
+						}
+					}
+
+				}
+
+				// &.site-nav__dropdown-panel--products {
+				// 	padding-bottom:0;
+				// }
+			}
+
+			// When dropdown is closed
+			&.is-closed {
+				.site-nav__dropdown-panel {
+					visibility: hidden;
+					opacity: 0;
+				    transition-property: opacity, visibility;
+				    transition-duration: .4s, 0s;
+				    transition-delay: 0s, .4s;
+				    position:absolute;
+				}
+			}
+
+			// When dropdown is open
+			&.is-open {
+				visibility: visible;
+				opacity: 1;
+			    transition-property: opacity, visibility;
+			    transition-duration: .4s, 0s;
+			    transition-delay: 0s, .4s;
+
+				> a {
+					background-color:@menu-highlight-blue;
+					border-color:@ideagen-blue;
+
+					&:after {
+						color:@ideagen-blue;
+					}
+				}
+			}
+		}
+	}
+
+	.nav-col {
+		width:300px;
+		display:block;
+		float:left;
+		margin:0;
+		padding:0;
+	}
+
+	.spacer {
+		clear:both;
+		margin:0 21px 20px 21px;
+		border-bottom:1px solid darken(@menu-subtle-grey, 10%);
+	}
+}
+
+.site-header__search-form {
+	margin-left:auto;
+	display:flex;
+
+	.site-header__search-form--input {
+		width:80px;
+		background:@search-background;
+		border-top:1px solid @search-border;
+		border-right:none;
+		border-bottom:1px solid @search-border;
+		border-left:1px solid @search-border;
+		font-size:12px;
+		padding:2px 10px;
+		.border-radius(100px,0,100px,0);
+		color:@menu-subtle-grey;
+		transition:width, .4s;
+
+		&:focus {
+			width:120px;
+			transition:width, .4s;
+			color:@dark-grey;
+		}
+	}
+
+	.site-header__search-form--button {
+		background:@search-background;
+		border-top:1px solid @search-border;
+		border-right:1px solid @search-border;
+		border-bottom:1px solid @search-border;
+		border-left:none;
+		font-size: 14px;
+		.border-radius(0,100px,0,100px);
+		padding:5px 10px;
+		color:@ideagen-blue;
+	}
+}
+
+.site-nav__mobile-nav-btn,
+.site-nav__mobile-search-btn,
+.has-slideout__expand-btn {
+	display:none;
+}
+
+@media (max-width:1090px) {
+	.site-nav .site-nav__primary-options>li>a {
+		padding: 25px 10px 20px;
+	}
+	.site-nav__dropdown-panel--company {
+		margin-left:-205px;
+	}
+}
+@media (max-width:1120px) {
+	.site-header__search-form .site-header__search-form--input:focus {
+		width:80px;
+	}
+}
+@media (min-width:1080px) and (max-width:1260px) {
+	.site-nav__dropdown-panel--company {
+		margin-left:-196px;
+	}
+}
+@media (min-width:1090px) and (max-width:1325px) {
+	.site-nav .site-nav__primary-options>li>a {
+		padding: 25px 14px 20px;
+	}
+}

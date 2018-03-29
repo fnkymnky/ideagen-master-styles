@@ -1,0 +1,166 @@
+//EASYSITE INLINE/IN-PAGE SEARCH BOX
+
+.inline-search-box {
+	width:340px;
+	margin:0 auto;
+
+	.oDataFormFieldset {
+		display:table-cell;	
+		float:left;
+		width:250px;
+		
+		.oDataFormLegend {
+			display:none;
+		}
+		.question {
+			display:none;
+		}
+		.answer {
+
+			input[type="text"] {
+				height:50px;
+				border:0;
+				border-radius:25px 0 0 25px;
+				padding:0 20px;
+				font-size:16px;
+				width:100%;
+			}
+		}	
+	}
+	
+	.oDataFormButtonContainer {
+		display:table-cell;
+		height:50px;
+		float:left;
+
+		input[type="submit"] {
+			background:@ideagen-orange;
+			color:@white;
+			border:0;
+			border-radius:0 25px 25px 0px;
+			height:50px;
+			padding:0 18px 0 16px;
+		}
+	}
+}
+
+// BUG FIX
+.form-group input, 
+.form-group select {
+    max-width:100%;
+}
+
+
+// -----------------------------------------------------------------------------------
+// ------------------------------- SOLUTION PAGES FORM -------------------------------
+// -----------------------------------------------------------------------------------
+.solution-header--form {
+	background:@white;
+	padding:24px;
+	border:3px solid @white;
+	-webkit-box-shadow: 0px 10px 50px 0px rgba(10,49,84,0.25);
+	-moz-box-shadow: 0px 10px 50px 0px rgba(10,49,84,0.25);
+	box-shadow: 0px 10px 50px 0px rgba(10,49,84,0.25);
+	color:@dark-grey; 
+	// margin-bottom:-180px;
+	position:relative;
+	z-index:10;
+	display:none;
+
+	// Form Type
+	&-lead {
+		font-size:18px;
+		margin-bottom:20px;
+	}
+	&-legal {
+		font-size:10px;
+		margin-top:20px;
+		color:@grey;
+	}
+
+	.form-group {
+		position:relative;
+	}
+
+	// Form Fields
+	input[type="text"], 
+	input[type="email"],
+	input[type="tel"],
+	select {
+		padding:14px 18px;
+		.border-radius(50px, 50px, 50px, 50px);
+		border:1px solid @input-border;
+		background:@input-background;
+		font-size:14px;
+		width:100%;
+
+		&.error {
+			background:@error-background;
+			border:1px solid @error-border;
+			color:@error-color;
+		}
+		&.valid {
+			background:@success-background;
+			border:1px solid @success-border;
+			color:@success-color;
+		}
+	}
+
+	// Form Submit
+	input[type="submit"] {
+		padding:20px 30px;
+		width:100%;
+		margin-top:10px;
+	}
+
+
+	// Form Validation
+	.has-success {
+		position:relative;
+		&:before {
+			content:"\f00c";
+			font-family: @font-awesome;
+			font-size:10px;
+			padding:4px;
+			color:@white;
+			background:@success-color;
+			border:2px solid @white;
+			.border-radius(15px,15px,15px,15px);
+			display:block;
+			position:absolute;
+			top:14px;
+			right:29px;
+			line-height:1;
+			z-index:10;
+		}
+	}
+	.help-block {
+		font-size:10px;
+
+		&.form-error {
+			position:absolute;
+			background:rgba(0,0,0,0.6);
+			padding:4px 8px;
+			.border-radius(5px,5px,5px,5px);
+			color:@white;
+			z-index:10;
+			top:-16px;
+			right:25px;
+		}
+	}
+
+	&.form-highlight {
+		animation: highlighter 1s linear 1;
+		border-color:@ideagen-orange;
+	}
+	@keyframes highlighter {  
+	  from { border-color:@ideagen-orange; }
+	  to { border-color:@white;}
+	}
+}
+
+@media (min-width:768px) {
+	.solution-header--form {
+		display:block;
+	}
+}

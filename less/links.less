@@ -1,0 +1,25 @@
+a {
+	text-decoration:underline;
+	text-decoration-skip-ink:auto;
+	text-decoration-skip:ink;
+	-webkit-text-decoration-skip: skip;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.contenteditor a.link-internal,
+.contenteditor a.external-external {
+	text-decoration: underline;
+	color: @ideagen-blue;
+
+	&:hover {
+		color: lighten(@ideagen-blue, 10%);
+		text-decoration:none;
+	}
+}
+
+.card-vertical .contenteditor a.link-internal,
+.card-vertical .contenteditor a.external-external {
+	text-decoration: none;
+}

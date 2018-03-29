@@ -1,0 +1,132 @@
+// FANCY UNDERLINES
+// Creates a nice underline for links using CSS linear gradient
+// with control on width, color and distance from baseline
+
+.underline-upgrade( @shadow-color: @white, @border-color: currentColor, @border-width:1px ) {
+	.cssgradients & {
+		text-decoration: none;
+		padding: .5em 0;
+		background-image: linear-gradient(@border-color, @border-color);
+		background-repeat: no-repeat;
+		background-size: 100% @border-width;
+		background-position: center bottom 30%;
+
+		text-shadow:
+			3px 0 @shadow-color,
+			2px 0 @shadow-color,
+			1px 0 @shadow-color,
+		   -1px 0 @shadow-color,
+		   -2px 0 @shadow-color,
+		   -3px 0 @shadow-color;
+
+	}
+}
+
+.thick-underline(@underline-color, @underline-hover-color) {
+		text-decoration: none;
+		position:relative;
+
+		&:hover {
+			&:before {
+				border-color:@underline-hover-color;
+			}
+		}
+		
+		&:before {
+			content:"";
+			display:block;
+			position:absolute;
+			width:100%;
+			height:3px;
+			border-bottom:1px solid @underline-color;
+			bottom:-3px;
+		}
+
+		&:after {
+			font-family: @font-awesome;
+			content:" \f105";
+			text-decoration: none;
+		}
+}
+
+// GRADIENT GENERATOR
+.gradient (@startColor: lighten(@ideagen-blue, 7%), @endColor: @ideagen-blue) {
+	background-color: @endColor;
+	background: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+	background: -webkit-linear-gradient(top, @startColor, @endColor);
+	background: -moz-linear-gradient(top, @startColor, @endColor);
+	background: -ms-linear-gradient(top, @startColor, @endColor);
+	background: -o-linear-gradient(top, @startColor, @endColor);
+}
+.horizontal-gradient (@startColor: lighten(@ideagen-blue, 7%), @endColor: @ideagen-blue) {
+ 	background-color: @endColor;
+	background-image: -webkit-gradient(linear, left top, right top, from(@startColor), to(@endColor));
+	background-image: -webkit-linear-gradient(left, @startColor, @endColor);
+	background-image: -moz-linear-gradient(left, @startColor, @endColor);
+	background-image: -ms-linear-gradient(left, @startColor, @endColor);
+	background-image: -o-linear-gradient(left, @startColor, @endColor);
+}
+
+// FULL CARD CLICKS
+// Converts the link text within a card to expand to the full height 
+// and width of the card, allowing the full card to become clickable
+// in a semantically correct way
+.link-card() {
+	a {
+		position:static;
+
+		//makes the heading link cover the entire card area so that the whole card is clickable
+		&:before {
+			content:"";
+			display:block;
+			position:absolute;
+			top:0;
+			left:0;
+			width:100%;
+			height:100%;
+			z-index:10;
+		}
+		&:focus, &:active {
+			text-decoration: none;
+		}
+	}
+}
+
+// BORDER RADIUS GENERATOR
+// Allows prefixed and tidy border radius creation on elements, 
+// without the need for exessive repetition.
+.border-radius(@topLeftRadius:0, @topRightRadius:0, @bottomLeftRadius:0, @bottomRightRadius:0) {
+	-moz-border-radius-topleft: @topLeftRadius;
+    -moz-border-radius-topright: @topRightRadius;
+    -moz-border-radius-bottomleft: @bottomLeftRadius;
+    -moz-border-radius-bottomright: @bottomRightRadius;
+
+	border-top-left-radius: @topLeftRadius;
+    border-top-right-radius: @topRightRadius;
+    border-bottom-left-radius: @bottomLeftRadius;
+    border-bottom-right-radius: @bottomRightRadius;
+}
+
+// BOX SHADOW GENERATOR
+// Allows prefixed and tidy box-shadow creatuion on elements
+.box-shadow(@string) {
+	-webkit-box-shadow: @string;
+	-moz-box-shadow:    @string;
+	box-shadow:         @string;
+}
+
+// FADE ANIMATION
+// A short and snappy fade animation for button/card hover effects, etc
+.softAnimate() {
+	transition:all .15s ease-in-out;
+}
+
+.displayFlex {
+	display:table;
+	display:-webkit-box;
+  	display:-moz-box;
+  	display:flexbox;
+  	display:-ms-flexbox;
+  	display:-webkit-flex;
+  	display:flex;
+}

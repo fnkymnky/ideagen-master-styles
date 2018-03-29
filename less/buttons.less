@@ -1,0 +1,41 @@
+#-ux-content .btn {
+	//Applies to all buttons
+	border-radius:300px;
+}
+
+.btn-primary {
+	background-color:@ideagen-orange;
+	border-color:@ideagen-orange;
+
+	&:hover {
+		background-color: darken(@ideagen-orange, 8%);
+		border-color: @ideagen-orange;
+	}
+
+	&:focus,&:active,&:active:hover {
+		background-color: darken(@ideagen-orange, 12%);
+		border-color: darken(@ideagen-orange, 18%);
+	}
+}
+
+.btn-white {
+	border-color:@white;
+	color:@white;
+
+	&:hover, 
+	&:active:hover,
+	&:active,
+	&:focus {
+		color:darken(@white, 15%);
+		border-color:darken(@white, 15%)
+	}
+}
+
+.btn {
+	text-decoration:none;
+	padding:8px 20px;
+}
+
+.btn-lg {
+	padding:12px 26px;
+}
