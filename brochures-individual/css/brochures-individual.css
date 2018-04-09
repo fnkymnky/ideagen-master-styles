@@ -1,0 +1,36 @@
+header#standard.brochures-palette .breadcrumbs,
+header#standard.brochures-palette .breadcrumbs a,
+header#standard.brochures-palette .search-button,
+header#standard.brochures-palette .mobile-nav-btn {
+    color:#fff;
+}
+header#standard.brochures-palette .breadcrumbs {
+    border-left-color:#fff;
+}
+
+section.brochure-content {
+	padding:50px 0;
+}
+aside.brochure-image .asset-width {
+	width:100%!important;
+}
+aside.brochure-image .asset-width .asset {
+	text-align:center
+}
+
+@media (min-width:768px) {
+	aside.brochure-image .asset-width .asset {
+		width:100%!important;
+	}
+	aside.brochure-image .asset-width .asset img {
+		height:auto!important;
+		width:100%!important;
+	}
+}
+@media (min-width:992px) {}
+
+@media (min-width:1280px) {
+    header#standard.brochures-palette {
+        padding:30px 30px 80px;
+    }
+}

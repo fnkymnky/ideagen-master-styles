@@ -1,0 +1,98 @@
+#content img,
+#content ul, 
+#content li,
+#content a,
+#content a:before,
+#content div,
+#content header,
+#content footer,
+#content section {
+    -moz-transition: all 0.4s ease-in-out, left 0.2s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out, left 0.2s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out, left 0.2s ease-in-out;
+    -o-transition: all 0.4s ease-in-out, left 0.2s ease-in-out;
+    transition: all 0.4s ease-in-out, left 0.2s ease-in-out;
+}
+
+.purple-gradient {
+	color:#fff;
+    background: #372050; /* Old browsers */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
+    background: -webkit-linear-gradient(left, #372050 0%, #56227d 100%);
+    background: -o-linear-gradient(left, #372050 0%, #56227d 100%);
+    background: linear-gradient(to right, #372050 0%, #56227d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#372050', endColorstr='#56227d',GradientType=1 ); /* IE6-9 */
+}
+
+.justify-centre {
+	text-align:center;
+}
+.justify-centre .asset-width {
+	margin:0 auto;
+}
+
+.product-listing {
+	text-align:center;
+	margin:20px 0;
+}
+.product-listing img {
+	width:60%;
+	margin:0 auto;
+}
+.product-listing h2 {
+	font-family:'Roboto', Arial, sans-serif;
+	font-size:40px;
+	font-weight:700;
+	margin:10px 0;
+}
+#tx-academy-listing h2 {color:#e84620}
+#tx-dartedm-listing h2 {color:#73c2ac}
+#tx-dartkw-listing h2 {color:#3caf97}
+#tx-dartocm-listing h2 {color:#009874}
+#tx-dartportal-listing h2 {color:#008061}
+#tx-dartqscan-listing h2 {color:#86cabe}
+#tx-enlighten-listing h2 {color:#3d277a}
+#tx-coruson-listing h2 {color:#0083c1}
+#tx-patientfirst-listing h2 {color:#1b71a3}
+#tx-pentana-listing h2 {color:#214194}
+#tx-proquis-listing h2 {color:#4d6cb2}
+#tx-q-pulse-listing h2 {color:#552988}
+#tx-risk-listing h2 {color:#552988}
+
+/*-sm- Small*/
+@media (min-width:768px) {
+	header#stubbed {
+		position:absolute;
+		right:0;
+		left:89px;
+	}
+	.product-listing img {
+		width:40%;
+		margin:0 auto;
+	}
+	#tx-grc-products {
+		clear:both;
+	}
+}
+/*-md- Medium*/
+@media (min-width:992px) {
+	#tx-grc-products {
+		clear:none;
+	}
+	.product-listing img {
+		width:60%;
+		margin:0 auto;
+	}
+	.product-listing h2 {
+		font-size:28px;
+	}
+
+}
+/*-lg- Large*/
+@media (min-width:1280px) {
+	.product-listing-grid-3 .product-listing img {
+		width:40%;
+	}
+	.product-listing h2 {
+		font-size:34px;
+	}
+}

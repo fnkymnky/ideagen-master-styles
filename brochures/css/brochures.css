@@ -1,0 +1,33 @@
+/*TEMP UNTIL CARD VIEWS ARE INSTALLED*/
+.item-category,
+.item-datetime,
+.item-owner-avatar,
+.item-owner-name {
+	display:none;
+}
+
+.item-thumbnail {
+	float:left;
+	height:240px;
+	width:40%;
+}
+.item-ttl {
+	float:left;
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    margin-top:40px;
+    padding: 0 0 30px; 
+    width:60%;
+    -webkit-font-smoothing: antialiased; 
+}
+.item-ttl>a {
+	color: #666;
+	display:block;
+    font-size: 24px;
+    margin:0 30px;
+}
+.item-ttl>a:hover {
+    color: #333; 
+    -webkit-transition: color 0.5s; 
+    transition: color 0.5s;
+}
