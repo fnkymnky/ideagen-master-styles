@@ -1,0 +1,43 @@
+.item-avatar {
+    display:none;
+}
+.item-date {
+    color:#999;
+    font-size:12px;
+    padding:20px 20px 0;
+}
+.item-date .icon {margin-right:5px;}
+.item-ttl {
+    line-height:1.2;
+    padding:10px 20px 15px;
+}
+.item-ttl a {
+    color:#666;
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    font-size:24px;
+    font-weight: 300;
+    -webkit-font-smoothing:antialiased;
+}
+.item-location {
+    color:#999;
+    font-size:12px;
+    padding:0 20px 20px;
+}
+.item-location span:last-child {
+    font-weight:700;
+}
+
+@media(min-width:768px) {
+    .item-avatar {
+        display:block;
+        padding:20px 20px 0;
+        text-align:center;
+    }
+    .item-avatar img {
+        max-width:100%;
+        height:auto;
+    }
+    .item-ttl a { font-size:26px }
+}
+@media(min-width:992px) {}
+@media(min-width:1280px) {}
