@@ -149,19 +149,21 @@
 }
 
 .section-default {
-	margin-bottom:50px;
 	.section-default--content {
-		margin-bottom:10px;
-
 		h1, h2 {
 			margin-top:0;
 		}
 	}
 }
 
-.content-list-panel {
+.content-list__panel {
 	border-top:4px solid @light-grey;
 	padding-top:14px;
+
+	&.content-list__panel--title-panel {
+		border-top:0;
+		padding-top:0;
+	}
 
 	p {
 		font-size:14px;
