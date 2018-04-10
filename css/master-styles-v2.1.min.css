@@ -1872,6 +1872,9 @@ nav.site-nav .site-nav__featured-content {
     content: normal;
     display: none;
   }
+  .grid-no-gap {
+    grid-gap: 0;
+  }
   .grid-xs-2 {
     grid-template-columns: 1fr 1fr;
   }
