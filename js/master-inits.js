@@ -125,9 +125,6 @@ $(window).resize(function(){
 
 
 $(document).ready(function() {
-
-
-
   // ==================
   // IE DETECTION INIT
   // ==================

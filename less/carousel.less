@@ -400,9 +400,11 @@
 			.carousel--quote,
 			.carousel--quote-meta {
 				.displayFlex();
+				flex-basis: auto;
 				flex-direction:row;
 				margin-top:20px;
 			}
+
 			.carousel--cta {
 				color:@white;
 				font-size:14px;
@@ -580,5 +582,13 @@
 				}
 			}
 		}
+	}
+}
+
+
+// Fix for IE10 flexbox overflow
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	.carousel--quote {
+		display:block!important;
 	}
 }
