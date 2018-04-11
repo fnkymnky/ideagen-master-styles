@@ -55,6 +55,29 @@ var currentTallest = 0,
  });
 };
 
+// =============
+// IE DETECTION
+// =============
+function detectIE() {
+    var ua = window.navigator.userAgent;
+
+    var msie = ua.indexOf('MSIE ');
+    if (msie > 0) {
+        // IE 10 or older => return version number
+        return true;
+    }
+
+    var trident = ua.indexOf('Trident/');
+    if (trident > 0) {
+        // IE 11 => return version number
+        return true;
+    }
+
+    // other browser
+    return false;
+}
+
+
 // ============
 // FORM LOADING
 // ============
@@ -86,27 +109,40 @@ $(window).load(function() {
   
 });
 
-$(window).resize(function(){
-  equalheight('.equalheight');
-});
-
 // ===========================================================
 // DETECT WINDOW SIZE CHANGES FOR MOBILE / DESKTOP NAVIGATION
 // ===========================================================
-$(window).resize(function() {
-    if( $(this).width() > 1024 ) {
-        $("nav.site-nav").removeClass("nav-mobile-active").addClass("nav-desktop-active");
-    };
-    if( $(this).width() <= 1024 ) {
-        $("nav.site-nav").removeClass("nav-desktop-active").addClass("nav-mobile-active");
-    };
+$(window).resize(function(){
+  equalheight('.equalheight');
+
+  if( $(this).width() > 1024 ) {
+      $("nav.site-nav").removeClass("nav-mobile-active").addClass("nav-desktop-active");
+  };
+  if( $(this).width() <= 1024 ) {
+      $("nav.site-nav").removeClass("nav-desktop-active").addClass("nav-mobile-active");
+  };
 });
 
-// ========================
-// DESKTOP SITE NAVIGATION
-// ========================
+
 $(document).ready(function() {
 
+
+
+  // ==================
+  // IE DETECTION INIT
+  // ==================
+  // Add .equalheight class to children of .grid element to fix float layout issues in versions < IE10
+   var isIE = detectIE();
+
+   if (isIE) {
+      $(".grid > div, .grid > li").addClass("equalheight");
+   }
+   console.log(detectIE());
+
+
+  // ========================
+  // DESKTOP SITE NAVIGATION
+  // ========================
   // Navigation - Detect for mobile / desktop and add class to the navigation to establish what it currently is
   if($(window).width() >= 1025) {
     $("nav.site-nav").removeClass("nav-mobile-active").addClass("nav-desktop-active");
