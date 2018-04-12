@@ -149,9 +149,9 @@
 }
 
 .section-default {
-	margin-bottom:50px;
+	margin-bottom:40px;
 	.section-default--content {
-		margin-bottom:10px;
+		margin-bottom:40px;
 
 		h1, h2 {
 			margin-top:0;
@@ -164,7 +164,7 @@
 	padding-top:14px;
 
 	p {
-		font-size:14px;
+		font-size:18px;
 	}
 }
 
@@ -179,6 +179,11 @@
 		}
 	}
 
+	&.content-panel--system-readiness-iso-45001 {
+		background:url("../img/solutions/ehs-management/system-readiness-iso-45001.jpg") no-repeat center center;
+		background-size:cover;
+	}
+
 	p {
 		font-size:16px;
 	}
@@ -191,6 +196,7 @@
 .blue-callout {
 	.horizontal-gradient();
 	padding:40px 0;
+	margin-bottom:60px;
 	color:@white;
 
 	.page-container {
@@ -221,6 +227,7 @@
 .light-blue-callout {
 	background:@menu-highlight-blue;
 	padding:40px 0;
+	margin-bottom:60px;
 }
 
 //
@@ -547,6 +554,11 @@
 		}
 		&:nth-child(4), &:nth-child(8) {
 			border-right:none;
+		}
+	}
+	.content-list-panel {
+		p {
+			font-size:18px;
 		}
 	}
 	.related-content {

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 63 44">
+  <g data-name="Layer 2">
+    <g data-name="Layer 1">
+      <path class="btn-background" d="M63 19.22V44H0a24.74 24.74 0 0 0 24.7-24.78 19.15 19.15 0 1 1 38.3 0z" fill="#fff" fill-rule="evenodd"/>
+      <path class="cross" d="M51.21 25.3a1 1 0 0 1 0 1.41 1 1 0 0 1-1.42 0l-6.29-6.29-6.29 6.29a1 1 0 0 1-1.42 0 1 1 0 0 1 0-1.41l6.3-6.3-6.3-6.3a1 1 0 0 1 1.42-1.41l6.29 6.29 6.29-6.29a1 1 0 0 1 1.42 1.41L44.92 19z" fill="#677180"/>
+    </g>
+  </g>
+</svg>
