@@ -286,11 +286,13 @@
 		overflow:visible;
 		.slick-track {
 			display:table;
-			width:100%!important;
 			.displayFlex();
 			flex-direction:row;
 			overflow:visible;
+			/* Correct alignment quirk*/
 			justify-content:center;
+			left:0!important;
+			width:100%!important;
 		}
 	}
 }
