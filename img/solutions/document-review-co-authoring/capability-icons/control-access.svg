@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <title>control-access</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <g>
+        <circle cx="50" cy="50" r="50" fill="#0a3254"/>
+        <g>
+          <circle cx="82.46" cy="87.49" r="10" fill="#fff"/>
+          <circle cx="82.46" cy="87.49" r="7.5" fill="#1ab211"/>
+          <path d="M86.79,85.54a.49.49,0,0,1-.16.38l-4,4-.76.76a.53.53,0,0,1-.38.16.55.55,0,0,1-.38-.16L80.31,90l-2-2a.52.52,0,0,1-.15-.38.54.54,0,0,1,.15-.38l.76-.76a.54.54,0,0,1,.38-.15.52.52,0,0,1,.38.15l1.64,1.65,3.66-3.67a.54.54,0,0,1,.38-.15.52.52,0,0,1,.38.15l.76.76A.51.51,0,0,1,86.79,85.54Z" fill="#fff"/>
+        </g>
+        <g>
+          <path d="M69,36.88,58.46,26.36A1.22,1.22,0,0,0,57.6,26H31.9a1.23,1.23,0,0,0-1.23,1.22V72.78A1.23,1.23,0,0,0,31.9,74H68.1a1.23,1.23,0,0,0,1.23-1.22v-35A1.22,1.22,0,0,0,69,36.88ZM57.84,29.2l8.29,8.31H57.84ZM33.12,71.55V28.45H55.39v9.14A2.37,2.37,0,0,0,57.75,40h9.13V71.55Z" fill="#fff"/>
+          <rect x="37.62" y="43.66" width="24.36" height="8.55" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"/>
+          <line x1="37.62" y1="43.66" x2="61.98" y2="52.2" fill="#fff" stroke="#fff" stroke-miterlimit="10"/>
+          <line x1="37.62" y1="52.2" x2="61.98" y2="43.66" fill="#fff" stroke="#fff" stroke-miterlimit="10"/>
+          <line x1="37.62" y1="35.42" x2="47.53" y2="35.42" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          <line x1="37.62" y1="57.7" x2="61.98" y2="57.7" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          <line x1="37.62" y1="64.7" x2="61.98" y2="64.7" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

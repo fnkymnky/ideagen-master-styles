@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <title>review-in-original-format</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <g>
+        <circle cx="50" cy="50" r="50" fill="#0a3254"/>
+        <g>
+          <circle cx="83.91" cy="87.49" r="10" fill="#fff"/>
+          <circle cx="83.91" cy="87.49" r="7.5" fill="#1ab211"/>
+          <path d="M88.24,85.54a.49.49,0,0,1-.16.38l-4,4-.76.76a.49.49,0,0,1-.38.16.51.51,0,0,1-.38-.16L81.77,90l-2-2a.49.49,0,0,1-.16-.38.51.51,0,0,1,.16-.38l.75-.76a.55.55,0,0,1,.38-.15.52.52,0,0,1,.38.15l1.64,1.65,3.66-3.67a.54.54,0,0,1,.38-.15.52.52,0,0,1,.38.15l.76.76A.51.51,0,0,1,88.24,85.54Z" fill="#fff"/>
+        </g>
+        <g>
+          <path d="M67.58,71.05H33.83V28H56.09v9.14a2.36,2.36,0,0,0,2.36,2.36h9.13v4.49A4.69,4.69,0,0,1,70,42.36V36.73L58.81,25.5H31.38v48H70v-14l-2.45,4.06Zm-9-42.36L66.84,37h-8.3Zm2.88,28.59a1,1,0,0,0-.13.38s0,1.8-.07,3.37h0c0,1.5-.08,2.94-.08,2.95l2.58-1.35L66.8,61a.89.89,0,0,0,.3-.31l5.55-9.12-5.51-3.49ZM62.74,62l-.58-.36c0-1.09.08-3.08.08-3.08l3.31,2Z" fill="#fff"/>
+          <line x1="40.29" y1="37.85" x2="48.29" y2="37.85" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
+          <line x1="40.29" y1="46.37" x2="61.84" y2="46.37" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
+          <line x1="40.29" y1="54.89" x2="57.84" y2="54.89" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
+          <line x1="49.24" y1="63.42" x2="57.24" y2="63.42" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
