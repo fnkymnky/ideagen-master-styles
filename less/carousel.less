@@ -347,14 +347,27 @@
 
 @media (max-width:767px) {
 	.carousel--video {
+		.carousel--slide.carousel--slide--quote-only {
+			.carousel--quote {
+				.displayFlex();
+				margin:0;
+				font-size:18px;
+			}
+			.carousel--quote-meta {
+				.displayFlex();
+				justify-content:center;
+				text-align:center;
+				margin-top:10px;
+			}
+		}
 		.carousel--slide-content {
-			padding:20px 20px 50px;
+			padding:50px 20px 50px;
 			text-align:center;
 
 			.carousel--heading {
 				font-size:24px;
 				line-height:1.3;
-				text-align:left;
+				text-align:center;
 			}
 			.carousel--cta {
 				background:@white;
@@ -397,8 +410,18 @@
 		}
 		.carousel--slide--midland-aerospace {
 			.carousel--slide-play {
-				background:url("../img/video-carousel/anthony-nolan/xs-midland-aerospace-video-carousel-bg.jpg") no-repeat center center @ideagen-blue;
+				background:url("../img/video-carousel/midland-aerospace/xs-midland-aerospace-video-carousel-bg.jpg") no-repeat center center @ideagen-blue;
 			}
+		}
+
+		// Quote Slides
+		.carousel--slide--tecomet {
+			background:url("../img/quote-carousel/tecomet/xs-tecomet-quote-carousel-bg.jpg") no-repeat center center @ideagen-blue;
+			background-size:cover;
+		}
+		.carousel--slide--fort-vale {
+			background:url("../img/quote-carousel/fort-vale/xs-fort-vale-quote-carousel-bg.jpg") no-repeat center center @ideagen-blue;
+			background-size:cover;
 		}
 	}
 	.carousel--pager {
@@ -414,6 +437,12 @@
 	.carousel--video {
 		.carousel--slide {
 			padding:80px 30px 85px;
+
+			&.carousel--slide--quote-only {
+				.carousel--quote {
+					font-size:20px;
+				}
+			}
 
 			.row {
 				height:100%;
@@ -513,6 +542,14 @@
 		background:url("../img/case-study-carousel/utc-aerospace/lg-utc-aerospace-video-carousel-bg.jpg") no-repeat center center @ideagen-blue;
 	}
 
+	// Quote Slides
+	.carousel--slide--tecomet {
+		background:url("../img/quote-carousel/tecomet/lg-tecomet-quote-carousel-bg.jpg") no-repeat center center @ideagen-blue;
+	}
+	.carousel--slide--fort-vale {
+		background:url("../img/quote-carousel/fort-vale/lg-fort-vale-quote-carousel-bg.jpg") no-repeat center center @ideagen-blue;
+	}	
+
 	.carousel {
 		.slick-next, .slick-prev {
 			top:50%;
@@ -597,8 +634,7 @@
 	}
 }
 
-
-// -- Header fix for landscape tablets
+// -- 1025px and up
 @media (min-width: 1025px) {
 	.carousel {
 		.carousel-slide {
