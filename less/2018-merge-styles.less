@@ -12,80 +12,308 @@
 
 
 // Old Solution Pages/Default Company Pages, etc
+#tx-standard-header h1 {
+    color:@white;
+}
 #tx-standard-header {
-	h1, h2, h3, h4, h5, h6 {
-		color:@white;
-		font-family: Lato,Helvetica,Arial,sans-serif;
-	    font-weight: 300;
-	    -webkit-font-smoothing: antialiased;
-	    margin-bottom:20px;
-	}
-	h1 {
-    	font-size: 34px
-	}
-	h2 {
-    	font-size: 24px
-	}
-	a, 
-	a:hover {
-    	color: #fff
-	}
+    a, a:hover {
+        color: #fff
+    }
+}
+#tx-standard-header h1 {
+    color:#fff;
+    font-size: 34px
+}
+#tx-standard-header h2 {
+    font-size:24px;
+    color:#fff;
 }
 
+//
+// CALLOUTS
+//
+.block-callout-sm.bg-purple {
+    background: #542989;
+    color: #fff;
+    min-height: 450px;
 
+    h2, h3, li, li a, p {
+        color:#fff;
+    }
+}
+.block-callout,
+.block-callout-sm {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    overflow: auto
+}
+.block-callout .btn,
+.block-callout-sm .btn {
+    margin: 10px 5px 0
+}
+.block-callout {
+    &-blue {
+        background: #003056;
+        color: #fff
+    }
+    &-white {
+        background: #fff;
+        color: #5a5a5a
+    }
+    &-grey {
+        background: @light-grey;
+        color: #5a5a5a
+    }
+    &-green {
+        background: #03735c;
+        color: #fff
+    }
+    &-purple {
+        background: #552988;
+        color: #fff
+    }
+    &-additional {
+        padding:30px 0;
+    }
+}
+.case-study-callout,
+.case-study-callout-two {
+    padding: 100px 0;
+    background-size: cover;
+    color: #fff;
+
+    h1, h2, h3, p, li {
+        color:#fff;
+    }
+}
+.case-study-callout {
+    text-align: center
+}
+.case-study-callout-two p:first-child,
+.download-callout p {
+    font-size: 24px
+}
+.quote-callout {
+    padding: 50px 0;
+    color: #fff;
+    background-size: cover;
+    background-color:@grey;
+}
+.quote-callout blockquote {
+    margin: 0
+}
+.quote-marks-dark:after,
+.quote-marks:after {
+    float: right;
+    margin-top: -47px;
+    display: block
+}
+.quote-callout blockquote p {
+    font-family: @lora;
+    font-size: 18px;
+    font-style: italic;
+    line-height: 1.4;
+    color:#fff;
+}
+.quote-callout blockquote p small {
+    font-family: @open-sans;
+    font-size: 14px;
+    font-style: normal
+}
+.case-study-callout-two p:first-child,
+.download-callout p {
+    font-size: 24px
+}
+.quote-purple {
+    background: #552988
+}
+.quote-purple blockquote p small {
+    color: #d1c0e5
+}
+.quote-red {
+    background: #b3282d
+}
+.quote-red blockquote p small {
+    color: #e5c0c0
+}
+.quote-blue {
+    background: #003056
+}
+.quote-blue blockquote p small {
+    color: #c5d6e2
+}
+.quote-orange {
+    background: #BF2D0B
+}
+.quote-orange blockquote p small {
+    color: #f4dad4
+}
+.quote-green {
+    background: #03735c
+}
+.quote-green blockquote p small {
+    color: #c4ede1;
+}
+.quote-marks-dark:after,
+.quote-marks-dark:before,
+.quote-marks:after,
+.quote-marks:before {
+    content: '';
+    height: 47px
+}
+.quote-marks,
+.quote-marks-dark {
+    height: 47px;
+    margin-bottom: 14px
+}
+.quote-marks:before {
+    background: url("/easysiteweb/easysite/styledata/master/img/open-quote-white.png") no-repeat;
+    width: 67px;
+    display: block
+}
+.quote-marks:after {
+    background: url("/easysiteweb/easysite/styledata/master/img/close-quote-white.png") no-repeat;
+    width: 68px
+}
+.quote-marks-dark:before {
+    background: url("/easysiteweb/easysite/styledata/master/img/open-quote-black.png") no-repeat;
+    width: 67px;
+    display: block
+}
+.quote-marks-dark:after {
+    background: url("/easysiteweb/easysite/styledata/master/img/close-quote-black.png") no-repeat;
+    width: 68px
+}
+.quote-callout .quote-headshot img {
+    border-radius: 50%;
+    border: 3px solid #fff
+}
+.ideagen-quote-callout {
+    background:#0a3254;
+    padding:80px 0;
+}
+.ideagen-quote-callout blockquote {
+    color:#fff;
+}
+.ideagen-quote-callout blockquote p {
+    font-style: italic;
+    font-size: 20px;
+    font-family: 'Lora', serif;
+    line-height: 1.4;
+}
+.ideagen-quote-callout blockquote small {
+    display: block;
+    margin-top: 10px;
+}
+
+.ideagen-quote-callout blockquote small:before {
+    content: '\2014 \00A0';
+}
+
+.virgin-trains-cs-bg {
+    background:url(/easysiteweb/easysite/styledata/master/img/case-study-section-covers/virgin-trains-cs-bg.jpg) no-repeat bottom center;
+    background-size:cover;
+}
+.haeco-cs-bg {
+    background:url(/easysiteweb/easysite/styledata/master/img/case-study-section-covers/haeco-cs-bg.jpg) no-repeat center center;
+    background-size:cover;
+}
+.pullout-box-blue {
+    background: #0a3254;
+    border-left: 8px solid #042037;
+    padding: 20px;
+    color: #fff;
+    font-size: 20px
+}
+.half-callout {
+    padding:0;
+
+    &-content-container {
+        padding-top: 50px;
+        padding-bottom: 50px
+    }
+    &-image {
+        overflow: hidden;
+        padding: 0
+    }
+}
+.half-callout-image {
+    .asset,
+    .cls,
+    .pel {
+        height:100%
+    }
+}
+.pentana-callout {
+    background: url(/easysiteweb/easysite/styledata/products/img/pentana/pentana-background.png) top left no-repeat;
+    color: #fff;
+    background-size: cover;
+    border-top: 8px solid #1b315c;
+    border-bottom: 8px solid #1b315c
+}
+.q-pulse-callout {
+    background: url(/easysiteweb/easysite/styledata/products/img/q-pulse/q-pulse-background.png) top left no-repeat;
+    color: #fff;
+    background-size: cover;
+    border-top: 8px solid #3b1e6a;
+    border-bottom: 8px solid #3b1e6a
+}
+
+//
 // Start Callout Backgrounds
+//
 .bg-inaer,
 .bg-lux-air-rescue {
-    background-image: url(/_resources/assets/inline/full/0/1517.jpg)
+    background-image: url("/_resources/assets/inline/full/0/1517.jpg")
 }
 .bg-symbiosis {
-    background-image: url(/easysiteweb/easysite/styledata/master/img/case-study-section-covers/pharmacy-case-study-bg.jpg)
+    background-image: url("/easysiteweb/easysite/styledata/master/img/case-study-section-covers/pharmacy-case-study-bg.jpg")
 }
 .idg-panel.bg-alaska-blood-bank {
-    background-image: url(/_resources/assets/inline/full/0/751.jpg)
+    background-image: url("/_resources/assets/inline/full/0/751.jpg")
 }
 #tx-assisted-conception-img-panel {
-    background: url(/easysiteweb/easysite/styledata/master/img/case-study-section-covers/life-science-background-3.jpg) center center no-repeat;
+    background: url("/easysiteweb/easysite/styledata/master/img/case-study-section-covers/life-science-background-3.jpg") center center no-repeat;
     background-size: cover
 }
 .bg-reynolds {
-    background-image: url(/_resources/assets/inline/full/0/1559.jpg)
+    background-image: url("/_resources/assets/inline/full/0/1559.jpg")
 }
 .bg-manchester {
-    background-image: url(/_resources/assets/inline/full/0/1235.jpg)
+    background-image: url("/_resources/assets/inline/full/0/1235.jpg")
 }
 .bg-clinical-edm {
-    background-image: url(/_resources/assets/inline/full/0/706.jpg)
+    background-image: url("/_resources/assets/inline/full/0/706.jpg")
 }
 .bg-clinical-innovation {
-    background-image: url(/_resources/assets/inline/full/0/716.jpg)
+    background-image: url("/_resources/assets/inline/full/0/716.jpg")
 }
 .bg-clinical-confidence {
-    background-image: url(/_resources/assets/inline/full/0/720.jpg)
+    background-image: url("/_resources/assets/inline/full/0/720.jpg")
 }
 .bg-clinical-adoption {
-    background-image: url(/_resources/assets/inline/full/0/722.jpg)
+    background-image: url("/_resources/assets/inline/full/0/722.jpg")
 }
 .sydney-airport {
-    background-image: url(/_resources/assets/inline/full/0/1734.jpg)
+    background-image: url("/_resources/assets/inline/full/0/1734.jpg")
 }
 .bg-dairy-crest {
-    background-image: url(/_resources/assets/inline/full/0/2043.jpg)
+    background-image: url("/_resources/assets/inline/full/0/2043.jpg")
 }
 .wm-housing-callout-bg {
-	background-image: url(/easysiteweb/easysite/styledata/master-v2/img/callout-backgrounds/wm-houseing-case-study-callout-bg.jpg);
+	background-image: url("/easysiteweb/easysite/styledata/master-v2/img/callout-backgrounds/wm-houseing-case-study-callout-bg.jpg");
 }
 .panel.pentana-blue {
-    background-image: url(/_resources/assets/inline/full/0/1230.jpg)
+    background-image: url("/_resources/assets/inline/full/0/1230.jpg")
 }
 .panel.inaer {
-    background-image: url(/_resources/assets/inline/full/0/997.jpg)
+    background-image: url("/_resources/assets/inline/full/0/997.jpg")
 }
 .panel.inaer:after {
-    background: url(/easysiteweb/easysite/styledata/ideagen_master/img/transpblack25.png)
+    background: url("/easysiteweb/easysite/styledata/ideagen_master/img/transpblack25.png")
 }
 .pentana-panel-bg {
-    background: url(/easysiteweb/easysite/styledata/products/img/pentana/pentana-background.png) no-repeat
+    background: url("/easysiteweb/easysite/styledata/products/img/pentana/pentana-background.png") no-repeat
 }
 .download-callout {
     padding: 40px 0
@@ -96,73 +324,161 @@
 }
 #content section.main .idg-panel.bg-img.bg-inaer2,
 .bg-inaer2 {
-    background-image: url(/_resources/assets/inline/full/0/469.jpg)
+    background-image: url("/_resources/assets/inline/full/0/469.jpg")
 }
 .bg-spirit-airlines {
-    background-image: url(/_resources/assets/inline/full/0/2067.jpg)
+    background-image: url("/_resources/assets/inline/full/0/2067.jpg")
 }
 .bg-gcaa {
-    background-image: url(/easysiteweb/easysite/styledata/master/img/case-study-section-covers/gcaa-case-study-bg.jpg)
+    background-image: url("/easysiteweb/easysite/styledata/master/img/case-study-section-covers/gcaa-case-study-bg.jpg")
 }
 .bg-trafi {
-    background-image: url(/_resources/assets/inline/full/0/2416.jpg)
+    background-image: url("/_resources/assets/inline/full/0/2416.jpg")
 }
 .bg-royal-devon {
-    background-image: url(/easysiteweb/easysite/styledata/master/img/case-study-section-covers/royal-devon-bg.jpg)
+    background-image: url("/easysiteweb/easysite/styledata/master/img/case-study-section-covers/royal-devon-bg.jpg")
 }
 #idg-video-customer-experience {
-    background-image: url(/easysiteweb/easysite/styledata/master/img/video-covers/support-customer-experience-video-cover.jpg)
+    background-image: url("/easysiteweb/easysite/styledata/master/img/video-covers/support-customer-experience-video-cover.jpg")
 }
 .coruson-video-bg {
-    background-image: url(/easysiteweb/easysite/styledata/products/img/coruson/coruson-video-still.jpg)
+    background-image: url("/easysiteweb/easysite/styledata/products/img/coruson/coruson-video-still.jpg")
 }
 .pleasereview-video-bg {
-    background-image: url(/easysiteweb/easysite/styledata/products/img/pleasereview/pleasereview-video-still.jpg)
+    background-image: url("/easysiteweb/easysite/styledata/products/img/pleasereview/pleasereview-video-still.jpg")
 }
 .bg-insight-aviation {
-    background-image: url(/_resources/assets/inline/full/0/528.jpg)
+    background-image: url("/_resources/assets/inline/full/0/528.jpg")
 }
 .bg-hepcomotion {
-    background-image: url(/_resources/assets/inline/full/0/6244.jpg)
+    background-image: url("/_resources/assets/inline/full/0/6244.jpg")
 }
 .bg-q-pulse-ipi-product-video {
-    background-image: url(/_resources/assets/inline/full/0/6246.jpg)
+    background-image: url("/_resources/assets/inline/full/0/6246.jpg")
 }
 .bg-southeastern {
-    background-image: url(/_resources/assets/inline/full/0/1519.jpg)
+    background-image: url("/_resources/assets/inline/full/0/1519.jpg")
 }
 .bg-enlighten {
-    background-image: url(/_resources/assets/inline/full/0/1227.jpg)
+    background-image: url("/_resources/assets/inline/full/0/1227.jpg")
 }
 .bg-virgin-trains {
-    background-image: url(/_resources/assets/inline/full/0/1523.jpg)
+    background-image: url("/_resources/assets/inline/full/0/1523.jpg")
 }
 .bg-nhs-grampian {
-    background-image: url(/_resources/assets/inline/full/0/1526.jpg)
+    background-image: url("/_resources/assets/inline/full/0/1526.jpg")
 }
 .nottingham-city-bg {
-    background-image: url(../img/page-header-images/industries/housing/nottingham-city-council-case-study-bg.jpg)
+    background-image: url("../img/page-header-images/industries/housing/nottingham-city-council-case-study-bg.jpg")
 }
 .orlando-bg {
-    background-image: url(../img/page-header-images/products/grc-portfolio/orlando-casee-study-callout-bg.jpg)
+    background-image: url("../img/page-header-images/products/grc-portfolio/orlando-casee-study-callout-bg.jpg")
 }
 .housing-bg {
-    background-image: url(../img/page-header-images/industries/housing/wm-housing-case-study-bg.jpg)
+    background-image: url("../img/page-header-images/industries/housing/wm-housing-case-study-bg.jpg")
 }
 .gdpr-background {
-    background-image: url(/EasySiteWeb/EasySite/StyleData/master-v2/img/page-header-images/company/gdpr-background.jpg);
+    background-image: url("/EasySiteWeb/EasySite/StyleData/master-v2/img/page-header-images/company/gdpr-background.jpg");
 }
 .pleasereview-bg {
-    background-image: url(/EasySiteWeb/EasySite/StyleData/master-v2/img/page-header-images/products/pleaserview-bg-standard-page.jpg);   
+    background-image: url("/EasySiteWeb/EasySite/StyleData/master-v2/img/page-header-images/products/pleaserview-bg-standard-page.jpg");   
 }
+//
 // End Callout Backgrounds
+//
+
+//
+// Typography, Lists and Misc Formatting
+//
+.check-list li:before,
+.no-style-list li:before {
+    font-family: IdeagenIcons;
+    padding-right: 8px;
+    font-size: 16px
+}
+.check-list li,
+.no-style-list li {
+    text-indent: -26px;
+    margin-bottom: 5px
+}
+.check-list li:before {
+    content: "\6f";
+    color: green
+}
+.box-links-list,
+.card-list,
+.check-list,
+.no-style-list {
+    list-style: none
+}
+#content ul {
+    margin-bottom: 20px
+}
+.justify-centre {
+    text-align: center
+}
+.col-lg-1 img,
+.col-lg-10 img,
+.col-lg-11 img,
+.col-lg-12 img,
+.col-lg-2 img,
+.col-lg-3 img,
+.col-lg-4 img,
+.col-lg-5 img,
+.col-lg-6 img,
+.col-lg-7 img,
+.col-lg-8 img,
+.col-lg-9 img,
+.col-md-1 img,
+.col-md-10 img,
+.col-md-11 img,
+.col-md-12 img,
+.col-md-2 img,
+.col-md-3 img,
+.col-md-4 img,
+.col-md-5 img,
+.col-md-6 img,
+.col-md-7 img,
+.col-md-8 img,
+.col-md-9 img,
+.col-sm-1 img,
+.col-sm-10 img,
+.col-sm-11 img,
+.col-sm-12 img,
+.col-sm-2 img,
+.col-sm-3 img,
+.col-sm-4 img,
+.col-sm-5 img,
+.col-sm-6 img,
+.col-sm-7 img,
+.col-sm-8 img,
+.col-sm-9 img {
+    max-width: 100%;
+    height: auto !important
+}
+
 
 @media (min-width:768px) {
 
+    //
+    // CALLOUTS
+    //
 	.greysection {
     	padding:50px 0;
     }
     
+    .block-callout {
+        padding-top: 80px;
+        padding-bottom: 80px
+    }
+    .block-callout-sm {
+        padding-top: 50px;
+        padding-bottom: 50px
+    }
+    .quote-callout blockquote p {
+        font-size: 18px
+    }
+
     #tx-standard-header {
         background-color: @ideagen-blue;
         background-size: cover;
@@ -327,12 +643,18 @@
     .sox-compliance-bg {
         background-image: url("/_resources/assets/inline/full/0/1728.jpg")
     }
+    // 
+    // END CALLOUTS
+    //
 }
 
 @media (min-width:992px) {
     #tx-standard-header {
         padding: 120px 15px;
         text-align: center
+    }
+    .quote-callout blockquote p {
+        font-size: 20px
     }
 }
 
