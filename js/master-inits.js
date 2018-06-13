@@ -134,7 +134,6 @@ $(document).ready(function() {
    if (isIE) {
       $(".grid > div, .grid > li").addClass("equalheight");
    }
-   console.log(detectIE());
 
 
   // ========================
