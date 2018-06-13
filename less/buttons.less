@@ -63,3 +63,34 @@
 		color:@white;
 	}
 }
+
+.play-video {
+	border:none;
+	display:block;
+	background:none;
+	.box-shadow(0px 10px 30px 0px rgba(10, 50, 84, 0.2));
+	.border-radius(400px, 400px, 400px, 400px);
+	height:110px;
+	width:110px;
+	padding:0;
+
+	svg .play-video-btn--circle {
+		fill:@white;
+
+	}
+	svg .play-video-btn--play-head {
+		fill:@ideagen-blue;
+	}
+	&:hover {
+		svg .play-video-btn--play-head {
+			fill:@ideagen-mid-blue;
+			.softAnimate()
+		}
+	}
+}
+
+.play-video--caption {
+	margin:5px 0 0;
+	color:@white;
+	font-size:12px;
+}

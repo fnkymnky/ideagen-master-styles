@@ -1,0 +1,10 @@
+Tasks:
+ ☐ Cross-browser test @in-proress @started(18-06-13 15:38)
+
+Changelog:
+  - Removed height:auto!important; from *merge-styles-2018.less* because it causes images to stretch if they were in a col. @created(18-06-13 15:07)
+
+＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
+Archive:
+ ✔ Add modal dialogue for video and hook up play button. @done (18-06-13 15:37) @project(Tasks)
+ ✔ Add richie's headshot @done (18-06-13 15:07) @project(Wednesday Afternoon)
