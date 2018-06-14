@@ -24,14 +24,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Slick Slider -->
 <link rel="stylesheet" type="text/css" href="/easysiteweb/easysite/styledata/master-v2/css/plugins/slick.min.css" />
 <!-- Master Website Stylesheet -->
-<link rel="stylesheet" href="/easysiteweb/easysite/styledata/master-v2.1/css/master-styles-v2.1.min.css?ver=1.1.2" />
+<link rel="stylesheet" href="/easysiteweb/easysite/styledata/master-v2.2/css/master-styles-v2.2.min.css?ver=1.0" />
 
 <!--[if lte IE 9]>
-	<link rel="stylesheet" type="text/css" href="/easysiteweb/easysite/styledata/master-v2.1/css/ie9.min.css" />
+	<link rel="stylesheet" type="text/css" href="/easysiteweb/easysite/styledata/master-v2.2/css/ie9.min.css" />
 <![endif]-->
 
 <!--[if IE 8]>
-	<link rel="stylesheet" type="text/css" href="/easysiteweb/easysite/styledata/master-v2.1/css/ie8.min.css" />
+	<link rel="stylesheet" type="text/css" href="/easysiteweb/easysite/styledata/master-v2.2/css/ie8.min.css" />
 	
 	<script>
 		document.createElement('header');

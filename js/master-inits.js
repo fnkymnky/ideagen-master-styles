@@ -490,3 +490,9 @@ $(document).ready(function() {
     $('body').scrollspy({ target: '#tab-navigation', offset:121 });
 
 });
+
+//
+// Academy Intro Video - Stop it playing when the modal is closed on mobile
+$("#academy-intro-video").on('hidden.bs.modal', function (e) {
+    $("#academy-intro-video iframe").attr("src", $("#academy-intro-video iframe").attr("src"));
+});

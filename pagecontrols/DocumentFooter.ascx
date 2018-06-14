@@ -46,7 +46,7 @@
     <!-- PAGE SPECIFIC PLUGINS -->
     <script src="/easysiteweb/easysite/styledata/master-v2/js/plugins/masonry.min.js"></script>
     <!-- MASTER(GLOBAL) SCRIPT INITIALISATIONS -->
-    <script src="/easysiteweb/easysite/styledata/master-v2.1/js/master-inits.min.js?v=1.1"></script>
+    <script src="/easysiteweb/easysite/styledata/master-v2.2/js/master-inits.min.js?v=1.0"></script>
 
 <!--[if lte IE 8]>
     <script>
