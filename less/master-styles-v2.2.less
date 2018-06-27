@@ -1,14 +1,14 @@
 // Variables
 @import "fonts-and-variables.less";
 
-// Merge Styles
-@import "2018-merge-styles.less";
-
 // Structure
 @import "structure.less";
 @import "navigation-v2.0.less";
 @import "on-page-navigation.less";
 @import "grid.less";
+
+// Merge Styles
+@import "2018-merge-styles.less";
 
 // Modules
 @import "carousel.less";
@@ -188,12 +188,15 @@ body {
 }
 
 .large-header {
-	color:@white;
 	text-align: center;
 	padding: 80px 10px;
 	background-position:center center;
 	background-size:cover;
 	overflow: auto;
+
+	h1, h2, h3, h4, h5, h6, p {
+		color:@white;
+	}
 
 	.btn {
 		margin:10px 0;
@@ -207,6 +210,12 @@ body {
 	h3 {
 		font-size: 16px;
 		margin:10px 0 14px;
+	}
+}
+
+.main-heading {
+	h1, h2, h3, h4, h5, h6, p {
+		color:@white;
 	}
 }
 
