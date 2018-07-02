@@ -489,7 +489,7 @@ $(document).ready(function() {
     $('body').attr('data-target', '#tab-navigation');
     $('body').scrollspy({ target: '#tab-navigation', offset:121 });
 
-});
+}); // END document.ready()
 
 //
 // Academy Intro Video - Stop it playing when the modal is closed on mobile
