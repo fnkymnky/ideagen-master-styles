@@ -44,47 +44,6 @@
 // -------------------------------- SOLUTION PAGES v2.0 ------------------------------
 // -----------------------------------------------------------------------------------
 
-.solution-header {
-	padding-top:40px;
-	margin-bottom:70px;
-	padding-bottom:100px;
-	position:relative;
-	background-size:cover;
-
-	.header-breadcrumbs {
-		padding-bottom:1px;
-		border-bottom:1px solid @ideagen-light-blue;
-		font-size:12px;
-		color:@white;
-		display:none;
-
-		a {
-			color:@white;
-			text-decoration:none;
-		}
-
-		span.fa-angle-right {
-			color:@ideagen-light-blue;
-			margin:0 3px;
-		}
-	}
-
-	.solution-header--cta {
-		text-align:center;
-		margin-top:14px;
-	}
-
-	.solution-header--curve {
-		background:url("../img/solutions/header-base-curve--mobile.svg");
-		background-size:cover;
-		height:80px;
-		width:100%;
-		position:absolute;
-		bottom:-20px
-	}
-}
-
-
 .content-list {
 	list-style:none;
 	padding:0;
@@ -145,7 +104,8 @@
 			font-size:14px;
 			padding:0 20px;
 			height:100%;
-			align-items:center;	}
+			align-items:center;	
+		}
 	}
 }
 
@@ -157,7 +117,178 @@
 		h1, h2 {
 			margin-top:0;
 		}
+
+		h1, h2, h3, h4, h5, h6 {
+			font-weight:700;
+		}
 	}
+}
+.section-academy {
+	h2 {
+		font-weight:600;
+	}
+	h3 {
+		font-weight:600;
+		font-size:26px;
+	}
+	h4 {
+		font-weight:600;
+		font-size:18px;
+	}
+	@media (min-width:1200px) {
+		margin-bottom:80px;
+	}
+	@media (min-width:768px) {
+		margin-bottom:50px;
+	}
+	@media (max-width:768px) {
+		margin-bottom:40px;
+	}
+}
+
+.features-list--academy {
+
+	li {
+		width:100%;
+		.displayFlex();
+		flex-basis: 100%; 
+		flex-direction: row;
+		align-items: flex-start;
+		justify-content: top;
+		margin-top:14px;
+		margin-bottom:14px;
+	}
+	.feature-content {
+		flex:1;
+	}
+	.feature-icon {
+		margin:3px 20px 0 0;
+	}
+	.feature-heading {
+		margin:0 0 5px;
+		font-size:18px;
+	}
+}
+
+.products-list--academy {
+	.product-item {
+		padding-top:20px;
+		padding-bottom:20px;
+
+		@media (min-width:768px) {
+			.displayFlex();
+			flex-direction: row;
+			align-items:center;
+		}
+	}
+	.product-item__content {}
+	.product-item__icon {
+		text-align:center;
+	}
+}
+
+.resource-list {
+	&__item {
+		a {
+			background:@white;
+			padding:15px 20px;
+			.box-shadow(0px 2px 8px 0px rgba(10, 50, 84, 0.25));
+			border-left:8px solid @ideagen-blue;
+			margin-bottom:15px;
+			.displayFlex();
+			flex-direction:row;
+			align-items:center;
+			text-decoration:none;
+			transition: border .1s ease-in-out;
+			width:100%;
+
+			&:hover {
+				border-color:lighten(@ideagen-blue, 20%);
+				.softAnimate();
+
+				.resource-icon {
+					color:lighten(@ideagen-blue, 20%);
+					.softAnimate();
+				}
+			}
+		}
+		.resource-content {
+			display:block;
+			flex:1;
+		}
+		.resource-label,
+		.resource-title,
+		.resource-icon {
+			display:block;
+		}
+		.resource-label {
+			color:@dark-grey;
+			font-size:11px;
+			text-transform:uppercase;
+		}
+		.resource-title {
+			color:@dark-grey;
+		}
+		.resource-icon {
+			font-size:26px;
+			margin-left:auto;
+			color:@dark-grey;
+			.softAnimate();
+			padding-left:14px;
+		}
+	}
+}
+
+.callout-sm--bottom-margin {
+	margin-bottom:80px;
+}
+
+.benefits-list--academy {
+	text-align:center;
+	
+	.benefit-heading {
+		margin-bottom:6px;
+		font-size:18px;
+	}
+	.benefit-description {
+		text-align:left;
+	}
+}
+
+.academy-users {
+	h3 {
+		margin:0 0 10px;
+	}
+	&__list-item {
+		margin-bottom:30px;
+	}
+	@media (min-width:768px) {
+		margin-bottom:20px;
+	}
+	@media (min-width:1200px) {
+		margin-bottom:50px;
+	}
+}
+
+.academy-quote {
+	margin-bottom:80px;
+
+	&__meta {
+		.displayFlex();
+		flex-direction:row;
+	}
+	&__headshot {
+		margin-right:14px;
+		height:50px!important;
+	}
+	&__details p {
+		font-size:12px;
+	}
+}
+
+.illustration-column img {
+	width:70%;
+	margin-top:30px;
 }
 
 .content-list-panel {
@@ -181,7 +312,7 @@
 	}
 
 	&.content-panel--system-readiness-iso-45001 {
-		background:url("../img/solutions/ehs-management/system-readiness-iso-45001.jpg") no-repeat center center;
+		background:url("../images/solutions/ehs-management/system-readiness-iso-45001.jpg") no-repeat center center;
 		background-size:cover;
 	}
 
@@ -233,6 +364,10 @@
 	background:@menu-highlight-blue;
 	padding:40px 0;
 	margin-bottom:60px;
+
+	h1, h2, h3, h4, h5, h6 {
+		font-weight:700;
+	}
 }
 
 //
@@ -310,11 +445,11 @@
 					line-height:1;
 					margin-right:10px;
 					display:inline-block;
-					content:url("../img/utilities/check-icon-green.svg");
+					content:url("../images/utilities/check-icon-green.svg");
 				}
 			}
 			.progress-icon h2:before {
-				content:url("../img/utilities/progress-icon-orange.svg");
+				content:url("../images/utilities/progress-icon-orange.svg");
 				width:20px;
 				height:20px;
 			}
@@ -399,12 +534,16 @@
 .callout-blue {
     background-color: @ideagen-blue; // Fallback for IE8 - Doesn't show the BG image.
     color:@white;
+
+    h1,h2,h3,h4,h5,h6,p {
+    	color:@white;
+    }
 }
 
 
 //Callout Background Images
 .vacancies-callout {
-    background-image: url("/_assets/backgrounds/careers/vacancies-callout-background.jpg");     
+    background-image: url("../images//assets/vacancies-callout-background.jpg");     
 }
 
 //
@@ -427,7 +566,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, .05);
     text-indent: 100%;
     white-space: nowrap;
-    background: url(../img/utilities/back-to-top-arrow.svg) center 50% no-repeat rgba(230, 83, 54, .8);
+    background: url(../images/utilities/back-to-top-arrow.svg) center 50% no-repeat rgba(230, 83, 54, .8);
     visibility: hidden;
     opacity: 0;
     -webkit-transition: opacity .3s 0s, visibility 0 .3s;
@@ -542,7 +681,7 @@
 		}
 
 		.solution-header--curve {
-			background:url("../img/solutions/header-base-curve--tablet.svg");
+			background:url("../images/solutions/header-base-curve--tablet.svg");
 			height:160px;
 		}
 
@@ -628,7 +767,7 @@
 	}
 	.solution-header {
 		.solution-header--curve {
-			background:url("../img/solutions/header-base-curve--desktop.svg");
+			background:url("../images/solutions/header-base-curve--desktop.svg");
 			height:180px;
 		}
 	}

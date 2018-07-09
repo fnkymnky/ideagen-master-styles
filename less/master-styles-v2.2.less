@@ -1,0 +1,511 @@
+// Variables
+@import "fonts-and-variables.less";
+
+// Structure
+@import "structure.less";
+@import "navigation-v2.0.less";
+@import "on-page-navigation.less";
+@import "grid.less";
+
+// Modules
+@import "carousel.less";
+@import "cards.less";
+@import "modals.less";
+@import "header.less";
+
+// Utilities
+@import "typography.less";
+@import "links.less";
+@import "buttons.less";
+@import "utilities.less";
+@import "forms.less";
+@import "search.less";
+@import "tables.less";
+
+// Merge Styles
+@import "2018-merge-styles.less";
+@import "legacy-fix.less";
+
+// Mixins
+@import "mixins.less";
+
+
+body {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+	font-size:16px;
+}
+
+// -----------------------------------------------------------------------------------
+// ------------------------------- HOME PAGE STYLES ----------------------------------
+// -----------------------------------------------------------------------------------
+
+.homepage-carousel {
+	max-height:500px;
+
+	// Slider Background Images
+	.slide-1 {
+		background-image:url("../images/assets/slide-1-background.jpg");
+	}
+	.slide-2 {
+		background-image:url("../images/assets/slide-2-background.jpg");
+	}
+	.slide-3 {
+		background-image:url("../images/assets/slide-3-background.jpg");
+	}
+	.slide-4 {
+		background-image:url("../images/assets/slide-4-background.jpg");
+	}
+}
+
+.featured-category {
+	text-transform:uppercase;
+	font-family:@open-sans;
+	font-weight:700;
+}
+.featuredcontent {
+	display:none; // Hide on mobile
+	clear:both;
+	background:@ideagen-blue;
+	
+	.featuredcontent-panel {
+		padding:30px;
+		color: @header-bg-color;
+		position:relative;
+		border-left:2px solid @white;
+		text-align: center;
+		background-size:cover;
+		width:25%;
+
+		&:hover {
+			cursor:pointer;
+		}
+
+		&:focus, &:active {
+			outline:0;
+		}
+		
+		&:first-child {
+			border-left:none;
+		}
+
+		&--category p {
+			margin:0;
+			padding:0;
+		}
+		
+		&--heading  h3 {
+			margin:0;
+		    font-size:20px;
+			font-family:@lato;
+			font-weight: 300;
+			line-height:26px;
+			display:none;
+		}
+		
+		&--link a {
+			color: @header-bg-color;
+			position:absolute;
+			bottom:30px;
+			text-transform:uppercase;
+			font-weight:bold;
+			letter-spacing:1px;
+			
+			&:before {
+				content:"\f0a9";
+				font-family:@font-awesome;
+				margin-right:4px;
+				display:inline-block;
+			}
+		}
+	}
+
+	.slide-1-tab {
+		background-image:@blue-overlay, url(../images/assets/slide-1-background.jpg);
+	}
+	.slide-2-tab {
+		background-image:@blue-overlay, url(../images/assets/slide-2-background.jpg);
+	}
+	.slide-3-tab {
+		background-image:@blue-overlay, url(../images/assets/slide-3-background.jpg);
+	}
+	.slide-4-tab {
+		background-image:@blue-overlay, url(../images/assets/slide-4-background.jpg);
+	}
+}
+
+// Slick Slider Customisation
+.featuredcontent {
+	.slick-list {
+		display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  		display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  		display: -ms-flexbox;      /* TWEENER - IE 10 */
+  		display: -webkit-flex;     /* NEW - Chrome */
+  		display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+		.slick-track {
+			display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  			display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  			display: -ms-flexbox;      /* TWEENER - IE 10 */
+  			display: -webkit-flex;     /* NEW - Chrome */
+  			display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+			border-top:2px solid @white;
+			width:100%!important;
+		}
+	}
+}
+
+// Twitter Timeline Embed
+.twitter-timeline {
+	width:100%!important;
+	min-height:540px!important;
+}
+
+
+// -----------------------------------------------------------------------------------
+// ----------------------------- STANDARD PAGE HEADERS -------------------------------
+// -----------------------------------------------------------------------------------
+.standard-header {
+	color:@white;
+	text-align: center;
+	padding: 50px 20px;
+	background-position:center center;
+	background-size:cover;
+	overflow: auto;
+
+	h1 {
+		font-size:24px;
+		color:@white;
+		margin:0;
+	}
+
+	// PRODUCTS PAGE BACKGROUND
+	&.products-bg {
+		background-image: url(../images/products/products-background.jpg);
+	}
+	&.error-page-bg {
+		background-image: url(../images/utilities/404-page-background.png);
+	}
+}
+
+.-idgbstp h1,.-idgbstp h2,.-idgbstp h3,.-idgbstp h4,.-idgbstp h5,.-idgbstp h6{
+    font-family:Lato,Helvetica,Arial,sans-serif;
+    font-weight:300;
+    -webkit-font-smoothing:antialiased;
+    margin-bottom:20px
+}
+
+.large-header {
+	text-align: center;
+	padding: 80px 10px;
+	background-position:center center;
+	background-size:cover;
+	overflow: auto;
+
+	h1, h2, h3, h4, h5, h6, p {
+		color:@white;
+	}
+
+	.btn {
+		margin:10px 0;
+	}
+
+	h1 {
+		font-size:30px;
+		margin:0;
+	}
+
+	h3 {
+		font-size: 16px;
+		margin:10px 0 14px;
+	}
+}
+
+.main-heading {
+	h1, h2, h3, h4, h5, h6, p {
+		color:@white;
+	}
+}
+
+.breadcrumbs {display:none;}
+
+// -----------------------------------------------------------------------------------
+// --------------------------- INDIVIDUAL JOB PAGE HEADERS ---------------------------
+// -----------------------------------------------------------------------------------
+
+.job-header {
+	color:@white;
+	padding: 50px 20px;
+	background-position:center center;
+	background-size:cover;
+	overflow: auto;
+
+	&--content {
+		display:flex;
+		align-items:center;
+		flex-direction: column;
+		text-align:center;
+
+		.job-details {
+			
+			h3 {
+				font-size:34px;
+				margin:0 0 10px;
+			}
+			.question .label {
+				font-family: @open-sans;
+				font-weight: 700;
+				font-size:16px;
+				padding:0;
+			}
+			.answer {
+				font-size:16px;
+			}
+		}
+
+		.job-apply {
+			margin-top:20px;
+
+			// Need to target via .pel-datastore because of Easysite/PeopleHR integration.
+			// Without this, the link in the candidate privacy notice text becomes a button.
+			.pel-datastore {
+				a {
+					background: #e15436;
+				    border: 0;
+				    padding: 15px 30px;
+				    border-radius: 27px;
+				    color:@white;
+
+				    &:hover {
+				    	background: #d34831;
+					    -webkit-transition: background .5s;
+					    transition: background .5s;
+				    }
+					&.btn-primary:active, 
+					&.btn-primary:active:hover, 
+					&.btn-primary:focus {
+				        background-color: #c03414;
+				        border-color: #a42c11;
+				        -webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+	    				box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+					}
+				}
+			}
+		}
+	}
+}
+
+.card-static {
+	.label {
+		margin:0 0 5px;
+		font-size:24px;
+		font-weight:400;
+		color:#666;
+		display:block;
+		text-align:left;
+		padding:0;
+	}
+}
+
+.job-sidebar {
+
+	.job-details {
+		.metadata {
+			margin-bottom:10px;
+			display:block;
+		}
+	}
+
+	.job-social-sharing {
+		.share-title {
+			font-family: @open-sans;
+			font-weight: 700;
+			font-size:14px;
+		}
+		.sharethis-inline-share-buttons {
+			height:40px;
+		}
+	}
+}
+
+.parallax {}
+
+// -----------------------------------------------------------------------------------
+// ---------------------------- SOCIAL BOOKMARKING MODULE ----------------------------
+// -----------------------------------------------------------------------------------
+
+.social-bookmarks {
+	li {
+		padding:0 2px;
+	}
+}
+
+// -----------------------------------------------------------------------------------
+// ---------------------------- PRODUCT FONT VARIANTS  -------------------------------
+// -----------------------------------------------------------------------------------
+
+.roboto-light {
+	font-family:@roboto;
+	font-weight:300;
+}
+
+
+// -----------------------------------------------------------------------------------
+// ---------------------------- RESPONSIVE BREAKPOINTS -------------------------------
+// -----------------------------------------------------------------------------------
+
+// -- 768px and up
+@media (min-width: 768px) {
+
+	.featuredcontent {
+		display: block; // Show on tablet and up
+	}
+
+	.standard-header {
+		padding: 70px 0;
+	
+		h1 {
+			font-size:28px;
+			margin:0;
+		}
+
+		.main-heading h1 {
+			font-size:32px;
+		}
+	}
+	.job-header {
+		padding:70px 0;
+
+		.job-details {
+			
+			h1 {
+				font-size:32px;
+			}
+		}
+	}
+	.large-header {
+		padding: 140px 10px;
+
+		h1 {
+			font-size:34px;
+		}
+
+		h3 {
+			font-size:18px;
+		}
+
+	}
+}
+
+
+// -- 992px and up
+@media (min-width: 992px ) {
+	.featuredcontent {
+
+		
+		.featuredcontent-panel {
+			text-align:left;
+			
+			&--category p {
+				margin-bottom:10px;
+			}
+
+			&--heading h3 {
+				display:block;
+			}
+		}
+	}
+
+	.standard-header {
+		padding:90px 0;
+
+		h1 {
+			font-size:32px;
+		}
+
+		.main-heading h1 {
+			font-size:36px;
+		}
+	}
+
+	.job-header {
+		padding:90px 0;
+
+		&--content {
+			display:flex;
+			align-items:center;
+			flex-direction: row;
+			text-align:left;
+
+			.job-details {
+				flex-gorw:3;
+
+				h3 {
+					font-size:36px;
+				}
+			}
+
+			.job-apply {
+				flex-grow:1;
+				text-align:right;
+				margin-top:0;
+			}
+		}
+	}
+
+	.large-header {
+		padding: 200px 10px;
+
+		h1 {
+			font-size:36px;
+		}
+	}
+}
+
+
+// -- 1200px and up
+@media (min-width: 1200px ) {
+	.standard-header {
+		padding: 130px 0;
+	
+		h1 {
+			font-size:32px;
+		}
+
+		.main-heading h1 {
+			font-size:42px;
+		}
+	}
+	.job-header {
+		padding:130px 0;
+
+		.job-details {
+
+			h3 {
+				font-size:42px;
+			}
+		}
+	}
+	.large-header {
+		padding: 250px 10px;
+
+		h1 {
+			font-size:46px;
+		}
+
+		h3 {
+			font-size:26px;
+		}
+	}
+}
+
+@media screen and (-ms-high-contrast: active) and (max-width: 30em),
+(-ms-high-contrast: none) and (max-width: 30em) {
+	.carousel-slide .slide-message {
+       		width:18%!important;
+    }
+    .job-details {
+    	width:100%!important;
+    }
+}
