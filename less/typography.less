@@ -7,11 +7,6 @@ body {
 	}
 }
 
-.reference-note {
-	font-style:italic;
-	color:@grey;
-	letter-spacing:1px;
-}
 
 // -----------------------------------------------------------------------------------
 // ---------------------------------- DEFAULT HEADINGS -------------------------------
@@ -19,11 +14,9 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family:@lato;
-    font-weight:300;
+    font-weight:700;
     color:@default-heading-color;
-    -webkit-font-smoothing: antialiased;
     line-height:1.2;
-    margin-bottom:20px;
 }
 
 h1 {
@@ -57,7 +50,6 @@ p {
 	color:@default-paragraph-color;
 	font-size:16px;
 	margin:0 0 14px;
-	line-height:1.6;
 }
 
 .angle-list {
@@ -103,7 +95,6 @@ p {
 .section-heading {
 	&--default h2 {
 		border-bottom:1px solid @light-grey;
-		font-weight:700;
 		position:relative;
 		padding-bottom:8px;
 		margin-top:30px;
@@ -155,19 +146,16 @@ p {
 	}
 	p.lead {
 		font-size: 22px;
-		line-height:1.5;
 	}
 }
 
 @media (min-width:992px) {
-	// p {
-	// 	font-size:18px;
-	// 	line-height:1.6;
-	// }
+	p {
+		font-size:18px;
+	}
 	.solution-header {
 		h1 {
 			font-size:42px;
-			font-weight:600;
 		}
 
 		h2 {

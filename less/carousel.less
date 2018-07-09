@@ -10,285 +10,181 @@
 	background:@ideagen-blue;
 	position:relative;
 	overflow:hidden;
-}
-.carousel-slide > div {
-	height: 460px;
 
-	display: table;            			 /* IE < 10, Opera *Presto* Desktop (Now dead) */
-	display: -webkit-box!important;      /* OLD - iOS 6-, Safari 3.1-6 */
-  	display: -moz-box!important;         /* OLD - Firefox 19- (buggy but mostly works) */
-  	display: -ms-flexbox!important;      /* TWEENER - IE 10 */
-  	display: -webkit-flex!important;     /* NEW - Chrome */
-  	display: flex!important;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
- 
-    -webkit-box-align: center;
-    -moz-box-align: center;
+	.carousel-slide > div {
+		height: 460px;
 
-  	-ms-flex-align: center;
-    -webkit-align-items: center;
-  	align-items: center;
-}
+		display: table;            			 /* IE < 10, Opera *Presto* Desktop (Now dead) */
+		display: -webkit-box!important;      /* OLD - iOS 6-, Safari 3.1-6 */
+	  	display: -moz-box!important;         /* OLD - Firefox 19- (buggy but mostly works) */
+	  	display: -ms-flexbox!important;      /* TWEENER - IE 10 */
+	  	display: -webkit-flex!important;     /* NEW - Chrome */
+	  	display: flex!important;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+	 
+	    -webkit-box-align: center;
+	    -moz-box-align: center;
 
-.carousel-slide {
-	background:@ideagen-blue;
-
-
-	display: table;            			 /* IE < 10, Opera *Presto* Desktop (Now dead) */
-	display: -webkit-box!important;      /* OLD - iOS 6-, Safari 3.1-6 */
-  	display: -moz-box!important;         /* OLD - Firefox 19- (buggy but mostly works) */
-  	display: -ms-flexbox!important;      /* TWEENER - IE 10 */
-  	display: -webkit-flex!important;     /* NEW - Chrome */
-  	display: flex!important;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
-	
-    -webkit-box-align: center;
-    -moz-box-align: center;
-
-	-ms-flex-align: center;
-    -webkit-align-items: center;
-	align-items:center;
-	
-	padding:0 14px;
-	min-height:470px;
-	width:100%;
-	background-size:cover;
-	background-position: center center;
-	text-align: center;
-
-	&:focus {
-		outline:0;
+	  	-ms-flex-align: center;
+	    -webkit-align-items: center;
+	  	align-items: center;
 	}
 
-	.slide-message {
-		width:100%;
+	.carousel-slide {
+		background:@ideagen-blue;
+
+
+		display: table;            			 /* IE < 10, Opera *Presto* Desktop (Now dead) */
+		display: -webkit-box!important;      /* OLD - iOS 6-, Safari 3.1-6 */
+	  	display: -moz-box!important;         /* OLD - Firefox 19- (buggy but mostly works) */
+	  	display: -ms-flexbox!important;      /* TWEENER - IE 10 */
+	  	display: -webkit-flex!important;     /* NEW - Chrome */
+	  	display: flex!important;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
 		
-		&--category {
-			p {
-				margin:0;
-				line-height:1;
-				padding:0;
-				display:inline-block;
+	    -webkit-box-align: center;
+	    -moz-box-align: center;
+
+		-ms-flex-align: center;
+	    -webkit-align-items: center;
+		align-items:center;
+		
+		padding:0 14px;
+		min-height:470px;
+		width:100%;
+		background-size:cover;
+		background-position: center center;
+		text-align: center;
+
+		&:focus {
+			outline:0;
+		}
+
+		.slide-message {
+			width:100%;
+			
+			&--category {
 				text-transform: uppercase;
 				color:@white;
 				font-family: @open-sans;
 				font-weight: 700;
+				
+				p {
+					margin:0;
+					line-height:1;
+					padding:0;
+					display:inline-block;
+				}
+
+				&.slide-message--category-fill p {
+					background:@ideagen-blue;
+					background:rgba(10,50,84,0.9);
+					padding:14px 14px 0;
+				}
 			}
 
-			&.slide-message--category-fill p {
-				background:@ideagen-blue;
-				background:rgba(10,50,84,0.9);
-				padding:14px 14px 0;
-			}
-		}
-
-		&--heading {
-			h1 {
-				font-size:28px;
-				margin:0 0 14px;
+			&--heading {
 				font-family:@lato;
 				font-weight: 300;
 				color:@white;
 				padding:10px 0 0;
+
+				h1 {
+					font-size:28px;
+					margin:0 0 14px;
+				}
+
+				&.slide-message--heading-fill {
+					background:@ideagen-blue;
+					background:rgba(10,50,84,0.9);
+					padding:14px;
+					margin:-3px 0 14px;
+
+					h1 {
+						margin-bottom:14px;
+						margin-top:0;
+					}
+				}
 			}
 
-			&.slide-message--heading-fill h1 {
-				margin-bottom:14px;
-				margin-top:0;
-				background:@ideagen-blue;
-				background:rgba(10,50,84,0.9);
-				padding:14px;
-				margin:-3px 0 14px;
+			&--sub-heading {
+				font-size:18px;
+				color:#fff;
+				margin-bottom:20px;
+
+				p {
+					margin:0;
+				} 
+			}
+
+			// Need to reference the .btn class due to Bootstrap inheritence
+			.btn {
+				background:@ideagen-orange;
+				border:none;
+				.border-radius(200px, 200px, 200px, 200px);
+				padding:14px 24px;
+				display:inline-block;
+				white-space: pre-wrap;
+				font-size:16px;
 			}
 		}
+			
+		.slide-graphic {
+			display:none;
+			text-align: center;
+			width:50%;
 
-		&--sub-heading p {
-			margin:0;
-			font-size:18px;
-			color:#fff;
-			margin-bottom:20px;
-		}
-
-		// Need to reference the .btn class due to Bootstrap inheritence
-		.btn {
-			background:@ideagen-orange;
-			border:none;
-			.border-radius(200px, 200px, 200px, 200px);
-			padding:14px 24px;
-			display:inline-block;
-			white-space: pre-wrap;
-			font-size:16px;
+			img {
+				max-width:100%;
+				margin:0 auto;
+			}
 		}
 	}
-		
-	.slide-graphic {
-		display:none;
-		text-align: center;
-		width:50%;
-
-		img {
-			max-width:100%;
-			margin:0 auto;
-		}
+	.slider {
+		overflow:hidden;
 	}
-}
-.slider {
-	overflow:hidden;
-}
 
-.slick-slide {
-	height:auto;
-}
+	.slick-slide {
+		height:auto;
+	}
 
-.slick-next, .slick-prev {
-	background:@white;
-	border:0;
-	font-size:0;
-	font-family:@font-awesome;
-	color:@ideagen-blue;
-	position:absolute;
-	z-index:1;
-	bottom:0;
-	.softAnimate();
-
-	&:focus, &:active {
-		outline: 0;
-	}
-}
-.slick-prev {
-	.border-radius(0, 50%, 0, 0);
-	padding:0px 24px 0 14px;
-	left:0;
-	
-	&:after {
-		content:"\f104";
-		font-size:40px;
-	}
-}
-.slick-next {
-	.border-radius(50%, 0, 0, 0);
-	padding:0px 14px 0 24px;
-	right:0;
-	
-	&:after {
-		content:"\f105";
-		font-size:40px;
-	}
-}
-
-.homepage-carousel {
-	max-height:500px;
-
-	// Slider Background Images
-	.slide-1 {
-		background-image:url(../images/assets/slide-1-background.jpg);
-	}
-	.slide-2 {
-		background-image:url(../images/assets/slide-2-background.jpg);
-	}
-	.slide-3 {
-		background-image:url(../images/assets/slide-3-background.jpg);
-	}
-	.slide-4 {
-		background-image:url(../images/assets/slide-4-background.jpg);
-	}
-}
-
-.featured-category {
-	text-transform:uppercase;
-	font-family:@open-sans;
-	font-weight:700;
-}
-.featuredcontent {
-	display:none; // Hide on mobile
-	clear:both;
-	background:@ideagen-blue;
-	
-	.featuredcontent-panel {
-		padding:30px;
-		position:relative;
-		border-left:2px solid @white;
-		text-align: center;
-		background-size:cover;
-		width:25%;
-
-		&:hover {
-			cursor:pointer;
-		}
+	.slick-next, .slick-prev {
+		background:@white;
+		border:0;
+		font-size:0;
+		font-family:@font-awesome;
+		color:@ideagen-blue;
+		position:absolute;
+		z-index:1;
+		bottom:0;
+		.softAnimate();
 
 		&:focus, &:active {
-			outline:0;
+			outline: 0;
 		}
+	}
+	.slick-prev {
+		.border-radius(0, 50%, 0, 0);
+		padding:0px 24px 0 14px;
+		left:0;
 		
-		&:first-child {
-			border-left:none;
+		&:after {
+			content:"\f104";
+			font-size:40px;
 		}
-
-		&--category p {
-			margin:0;
-			padding:0;
-			color:@white;
-		}
+	}
+	.slick-next {
+		.border-radius(50%, 0, 0, 0);
+		padding:0px 14px 0 24px;
+		right:0;
 		
-		&--heading  h3 {
-			margin:0;
-		    font-size:20px;
-			font-family:@lato;
-			font-weight: 300;
-			line-height:26px;
-			display:none;
-			color:@white;
+		&:after {
+			content:"\f105";
+			font-size:40px;
 		}
-		
-		&--link a {
-			color: @header-bg-color;
-			position:absolute;
-			bottom:30px;
-			text-transform:uppercase;
-			font-weight:bold;
-			letter-spacing:1px;
-			
-			&:before {
-				content:"\f0a9";
-				font-family:@font-awesome;
-				margin-right:4px;
-				display:inline-block;
-			}
-		}
-	}
-
-	.slide-1-tab {
-		background-image:@blue-overlay, url(../images/assets/slide-1-background.jpg);
-	}
-	.slide-2-tab {
-		background-image:@blue-overlay, url(../images/assets/slide-2-background.jpg);
-	}
-	.slide-3-tab {
-		background-image:@blue-overlay, url(../images/assets/slide-3-background.jpg);
-	}
-	.slide-4-tab {
-		background-image:@blue-overlay, url(../images/assets/slide-4-background.jpg);
 	}
 }
 
-// Slick Slider Customisation
-.featuredcontent {
-	.slick-list {
-		display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-  		display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-  		display: -ms-flexbox;      /* TWEENER - IE 10 */
-  		display: -webkit-flex;     /* NEW - Chrome */
-  		display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
 
-		.slick-track {
-			display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-  			display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-  			display: -ms-flexbox;      /* TWEENER - IE 10 */
-  			display: -webkit-flex;     /* NEW - Chrome */
-  			display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
-			border-top:2px solid @white;
-			width:100%!important;
-		}
-	}
-}
+
 
 
 // VIDEO CAROUSEL
@@ -318,8 +214,7 @@
 		.carousel--heading {
 			color:@white;
 			margin-top:0;
-			font-size:28px;
-			font-weight:700;
+			font-size:28px
 		}
 		.carousel--quote {
 			margin:30px 0 0;
@@ -351,6 +246,31 @@
 			align-items:center;
 			height:100%;
 			background-size:cover!important;
+
+			.play-video {
+				border:none;
+				display:block;
+				background:none;
+
+				svg .play-video-btn--circle {
+					fill:@white;
+				}
+				svg .play-video-btn--play-head {
+					fill:@ideagen-blue;
+				}
+				&:hover {
+					svg .play-video-btn--play-head {
+						fill:@ideagen-mid-blue;
+						.softAnimate()
+					}
+				}
+			}
+
+			.play-video--caption {
+				margin:5px 0 0;
+				color:@white;
+				font-size:12px;
+			}
 		}
 	}
 }
@@ -465,47 +385,47 @@
 		}
 		.carousel--slide--bdo {
 			.carousel--slide-play {
-				background:url("../images/video-carousel/bdo/xs-bdo-video-carousel-bg.jpg") no-repeat center center @ideagen-blue;
+				background:url("../img/video-carousel/bdo/xs-bdo-video-carousel-bg.jpg") no-repeat center center @ideagen-blue;
 			}
 		}
 		.carousel--slide--haeco {
 			.carousel--slide-play {
-				background:url("../images/video-carousel/haeco/xs-haeco-video-carousel-bg.jpg") no-repeat center center @ideagen-blue;
+				background:url("../img/video-carousel/haeco/xs-haeco-video-carousel-bg.jpg") no-repeat center center @ideagen-blue;
 			}
 		}
 		.carousel--slide--scottish-seafarms {
 			.carousel--slide-play {
-				background:url("../images/video-carousel/scottish-seafarms/xs-scottish-seafarms-video-carousel-bg.jpg") no-repeat center center @ideagen-blue;
+				background:url("../img/video-carousel/scottish-seafarms/xs-scottish-seafarms-video-carousel-bg.jpg") no-repeat center center @ideagen-blue;
 			}
 		}
 		.carousel--slide--air-transat {
 			.carousel--slide-play {
-				background:url("../images/video-carousel/air-transat/xs-air-transat-video-carousel-bg.jpg") no-repeat center center @ideagen-blue;
+				background:url("../img/video-carousel/air-transat/xs-air-transat-video-carousel-bg.jpg") no-repeat center center @ideagen-blue;
 			}
 		}
 		.carousel--slide--anthony-nolan {
 			.carousel--slide-play {
-				background:url("../images/video-carousel/anthony-nolan/xs-anthony-nolan-video-carousel-bg.jpg") no-repeat center center @ideagen-blue;
+				background:url("../img/video-carousel/anthony-nolan/xs-anthony-nolan-video-carousel-bg.jpg") no-repeat center center @ideagen-blue;
 			}
 		}
 		.carousel--slide--midland-aerospace {
 			.carousel--slide-play {
-				background:url("../images/video-carousel/midland-aerospace/xs-midland-aerospace-video-carousel-bg.jpg") no-repeat center center @ideagen-blue;
+				background:url("../img/video-carousel/midland-aerospace/xs-midland-aerospace-video-carousel-bg.jpg") no-repeat center center @ideagen-blue;
 			}
 		}
 		.carousel--slide--hepcomotion {
 			.carousel--slide-play {
-				background:url("../images/video-carousel/hepcomotion/xs-hepcomotion-video-carousel-bg.jpg") no-repeat center center @ideagen-blue;
+				background:url("../img/video-carousel/hepcomotion/xs-hepcomotion-video-carousel-bg.jpg") no-repeat center center @ideagen-blue;
 			}
 		}
 
 		// Quote Slides
 		.carousel--slide--tecomet {
-			background:url("../images/quote-carousel/tecomet/xs-tecomet-quote-carousel-bg.jpg") no-repeat center center @ideagen-blue;
+			background:url("../img/quote-carousel/tecomet/xs-tecomet-quote-carousel-bg.jpg") no-repeat center center @ideagen-blue;
 			background-size:cover;
 		}
 		.carousel--slide--fort-vale {
-			background:url("../images/quote-carousel/fort-vale/xs-fort-vale-quote-carousel-bg.jpg") no-repeat center center @ideagen-blue;
+			background:url("../img/quote-carousel/fort-vale/xs-fort-vale-quote-carousel-bg.jpg") no-repeat center center @ideagen-blue;
 			background-size:cover;
 		}
 	}
@@ -598,47 +518,47 @@
 
 	// Slide Backgrounds
 	.carousel--slide--haeco {
-		background:url("../images/video-carousel/haeco/lg-haeco-video-carousel-bg.jpg") no-repeat center center @ideagen-blue;
+		background:url("../img/video-carousel/haeco/lg-haeco-video-carousel-bg.jpg") no-repeat center center @ideagen-blue;
 	}
 	.carousel--slide--bdo {
-		background:url("../images/video-carousel/bdo/lg-bdo-video-carousel-bg.jpg") no-repeat center center @ideagen-blue;
+		background:url("../img/video-carousel/bdo/lg-bdo-video-carousel-bg.jpg") no-repeat center center @ideagen-blue;
 	}
 	.carousel--slide--scottish-seafarms {
-		background:url("../images/video-carousel/scottish-seafarms/lg-scottish-seafarms-video-carousel-bg.jpg") no-repeat center center @ideagen-blue;
+		background:url("../img/video-carousel/scottish-seafarms/lg-scottish-seafarms-video-carousel-bg.jpg") no-repeat center center @ideagen-blue;
 	}
 	.carousel--slide--air-transat {
-		background:url("../images/video-carousel/air-transat/lg-air-transat-video-carousel-bg.jpg") no-repeat center center @ideagen-blue;
+		background:url("../img/video-carousel/air-transat/lg-air-transat-video-carousel-bg.jpg") no-repeat center center @ideagen-blue;
 	}
 	.carousel--slide--anthony-nolan {
-		background:url("../images/video-carousel/anthony-nolan/lg-anthony-nolan-video-carousel-bg.jpg") no-repeat center center @ideagen-blue;
+		background:url("../img/video-carousel/anthony-nolan/lg-anthony-nolan-video-carousel-bg.jpg") no-repeat center center @ideagen-blue;
 	}
 	.carousel--slide--midland-aerospace {
-		background:url("../images/video-carousel/midland-aerospace/lg-midland-aerospace-video-carousel-bg.jpg") no-repeat center center @ideagen-blue;
+		background:url("../img/video-carousel/midland-aerospace/lg-midland-aerospace-video-carousel-bg.jpg") no-repeat center center @ideagen-blue;
 	}
 	.carousel--slide--hepcomotion {
-		background:url("../images/video-carousel/hepcomotion/lg-hepcomotion-video-carousel-bg.jpg") no-repeat center center @ideagen-blue;
+		background:url("../img/video-carousel/hepcomotion/lg-hepcomotion-video-carousel-bg.jpg") no-repeat center center @ideagen-blue;
 	}
 
 	// Non-Video Case Studies
 	.carousel--slide--pearl {
-		background:url("../images/case-study-carousel/pearl-theraputics/pearl-case-study-bg.jpg") no-repeat center center @ideagen-blue;
+		background:url("../img/case-study-carousel/pearl-theraputics/pearl-case-study-bg.jpg") no-repeat center center @ideagen-blue;
 	}
 	.carousel--slide--nwdc {
-		background:url("../images/case-study-carousel/nwdc/nwdc-case-study-bg.jpg") no-repeat center center @ideagen-blue;
+		background:url("../img/case-study-carousel/nwdc/nwdc-case-study-bg.jpg") no-repeat center center @ideagen-blue;
 	}
 	.carousel--slide--utc-aerospace {
-		background:url("../images/case-study-carousel/utc-aerospace/lg-utc-aerospace-video-carousel-bg.jpg") no-repeat center center @ideagen-blue;
+		background:url("../img/case-study-carousel/utc-aerospace/lg-utc-aerospace-video-carousel-bg.jpg") no-repeat center center @ideagen-blue;
 	}
 	.carousel--slide--heineken {
-		background:url("../images/case-study-carousel/heineken/heineken-case-study-bg.jpg") no-repeat center center @ideagen-blue;
+		background:url("../img/case-study-carousel/heineken/heineken-case-study-bg.jpg") no-repeat center center @ideagen-blue;
 	}
 
 	// Quote Slides
 	.carousel--slide--tecomet {
-		background:url("../images/quote-carousel/tecomet/lg-tecomet-quote-carousel-bg.jpg") no-repeat center center @ideagen-blue;
+		background:url("../img/quote-carousel/tecomet/lg-tecomet-quote-carousel-bg.jpg") no-repeat center center @ideagen-blue;
 	}
 	.carousel--slide--fort-vale {
-		background:url("../images/quote-carousel/fort-vale/lg-fort-vale-quote-carousel-bg.jpg") no-repeat center center @ideagen-blue;
+		background:url("../img/quote-carousel/fort-vale/lg-fort-vale-quote-carousel-bg.jpg") no-repeat center center @ideagen-blue;
 	}	
 
 	.carousel {

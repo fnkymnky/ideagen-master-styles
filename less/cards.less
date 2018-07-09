@@ -158,11 +158,11 @@
 		}
 
 		&.company-benefits-advert {
-			background-image:@blue-overlay, url(../images/assets/benefits-and-rewards-banner-ad.jpg);
+			background-image:@blue-overlay, url(/_assets/backgrounds/careers/benefits-and-rewards-banner-ad.jpg);
 		}
 
 		&.meet-our-people-advert {
-			background-image:@blue-overlay, url(../images/assets/meet-our-people-banner-ad.jpg);
+			background-image:@blue-overlay, url(/_assets/backgrounds/careers/meet-our-people-banner-ad.jpg);
 		}
 	}
 }
@@ -214,7 +214,6 @@
 
 		a {
 			color:@dark-grey;
-			text-decoration:none;
 		}
 		&:focus, &:active {
 			text-decoration: none;
@@ -361,7 +360,6 @@
 			display:block;
 			padding:14px 0;
 			border-top:1px solid @light-grey;
-			text-decoration:none;
 			.softAnimate();
 
 			&:hover {
@@ -398,10 +396,6 @@ ul.card-list-widget {
 	margin:0;
 	list-style:none;
 
-	a {
-		text-decoration:none;
-	}
-
 	&.card-list-widget--blog-recent {
 
 		// Hide all items on mobile, to then allow the nth-child psudo to show only 2
@@ -434,7 +428,7 @@ ul.card-list-widget {
 		}
 	}
 
-	&.card-list-widget--news-recent {
+	&.card-list--news-recent {
 
 		// Hide all items on mobile, to then allow the nth-child psudo to show only 2
 		li {
@@ -506,32 +500,32 @@ ul.card-list-widget {
 	font-family: @roboto;
 	font-weight: 800;
 
-	&--qpulse p {
+	&--qpulse {
 		color: @qpulse-purple;
 	}
-	&--pleasereview p {
+	&--pleasereview {
 		color: @pleasereview-yellow;
 	}
-	&--pentana p {
+	&--pentana {
 		color: @pentana-blue;
 	}
-	&--coruson p {
+	&--coruson {
 		color: @coruson-blue;
 	}
-	&--dart p {
+	&--dart {
 		color: @dart-green;
 	}
-	&--easysite p {
+	&--easysite {
 		color: @easysite-blue;
 	}
-	&--academy p {
+	&--academy {
 		color: @ideagen-blue;
 		letter-spacing: -1px;
 
 		span {
+			font-weight: 300;
 			color: @academy-gray;
 			letter-spacing: 0;
-			font-weight:400;
 		}
 	}
 }
