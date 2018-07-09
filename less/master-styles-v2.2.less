@@ -7,9 +7,6 @@
 @import "on-page-navigation.less";
 @import "grid.less";
 
-// Merge Styles
-@import "2018-merge-styles.less";
-
 // Modules
 @import "carousel.less";
 @import "cards.less";
@@ -25,6 +22,9 @@
 @import "search.less";
 @import "tables.less";
 
+// Merge Styles
+@import "2018-merge-styles.less";
+@import "legacy-fix.less";
 
 // Mixins
 @import "mixins.less";
@@ -46,16 +46,16 @@ body {
 
 	// Slider Background Images
 	.slide-1 {
-		background-image:url("/_assets/backgrounds/homepage/slide-1-background.jpg");
+		background-image:url("../images/assets/slide-1-background.jpg");
 	}
 	.slide-2 {
-		background-image:url("/_assets/backgrounds/homepage/slide-2-background.jpg");
+		background-image:url("../images/assets/slide-2-background.jpg");
 	}
 	.slide-3 {
-		background-image:url("/_assets/backgrounds/homepage/slide-3-background.jpg");
+		background-image:url("../images/assets/slide-3-background.jpg");
 	}
 	.slide-4 {
-		background-image:url("/_assets/backgrounds/homepage/slide-4-background.jpg");
+		background-image:url("../images/assets/slide-4-background.jpg");
 	}
 }
 
@@ -122,16 +122,16 @@ body {
 	}
 
 	.slide-1-tab {
-		background-image:@blue-overlay, url(/_assets/backgrounds/homepage/slide-1-background.jpg);
+		background-image:@blue-overlay, url(../images/assets/slide-1-background.jpg);
 	}
 	.slide-2-tab {
-		background-image:@blue-overlay, url(/_assets/backgrounds/homepage/slide-2-background.jpg);
+		background-image:@blue-overlay, url(../images/assets/slide-2-background.jpg);
 	}
 	.slide-3-tab {
-		background-image:@blue-overlay, url(/_assets/backgrounds/homepage/slide-3-background.jpg);
+		background-image:@blue-overlay, url(../images/assets/slide-3-background.jpg);
 	}
 	.slide-4-tab {
-		background-image:@blue-overlay, url(/_assets/backgrounds/homepage/slide-4-background.jpg);
+		background-image:@blue-overlay, url(../images/assets/slide-4-background.jpg);
 	}
 }
 
@@ -182,11 +182,18 @@ body {
 
 	// PRODUCTS PAGE BACKGROUND
 	&.products-bg {
-		background-image: url(/_assets/backgrounds/products/products-background.jpg);
+		background-image: url(../images/products/products-background.jpg);
 	}
 	&.error-page-bg {
-		background-image: url(/_assets/backgrounds/ideagen/404-page-background.png);
+		background-image: url(../images/utilities/404-page-background.png);
 	}
+}
+
+.-idgbstp h1,.-idgbstp h2,.-idgbstp h3,.-idgbstp h4,.-idgbstp h5,.-idgbstp h6{
+    font-family:Lato,Helvetica,Arial,sans-serif;
+    font-weight:300;
+    -webkit-font-smoothing:antialiased;
+    margin-bottom:20px
 }
 
 .large-header {
@@ -387,6 +394,7 @@ body {
 		h3 {
 			font-size:18px;
 		}
+
 	}
 }
 
