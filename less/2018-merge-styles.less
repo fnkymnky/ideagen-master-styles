@@ -259,12 +259,12 @@
     -moz-box-shadow: 0px -1px 2px -1px rgba(0,0,0,0.75);
     box-shadow: 0px -1px 2px -1px rgba(0,0,0,0.75);
 }
-.blog-photo, .blog-photo .asset {
+.blog-photo {
     height:200px;
     width:100%;
-}
-.blog-photo .asset-width {
-    width:100%!important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 .blog-article {
     background:#fff;
@@ -288,10 +288,7 @@
 .blog-author {
     margin-bottom:30px;
     text-align:center;
-    
-    p {
-        font-size:12px;    
-    }    
+    font-size:12px;
 
     a {
         border-bottom:2px solid #B3C9E9;
@@ -334,8 +331,8 @@
     line-height: 1.3;
     margin-top:0;
 }
-.author-profile-card .author-bio {
-    font-size:14px;
+.author-profile-card .author-bio p {
+    font-size:16px;
 }
 .blog-aside {
     overflow:auto;
