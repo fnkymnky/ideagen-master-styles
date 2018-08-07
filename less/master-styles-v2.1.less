@@ -157,6 +157,161 @@ body {
 	min-height:540px!important;
 }
 
+// -----------------------------------------------------------------------------------
+// ------------------------------- AVIATION MAIN PAGE --------------------------------
+// -----------------------------------------------------------------------------------
+.world-map-header {
+	background:url("../img/aviation-main-page/world-map-background.svg") no-repeat top center;
+	background-size:contain;
+	padding:80px 0 100px;
+	position:relative;
+
+	.capabilitiy-icons-list {
+		margin:0;
+
+		li {
+			margin-top:10px;
+			margin-bottom:10px;
+		}
+
+		img {
+			.box-shadow(0px 5px 15px 0px rgba(0,0,0,0.2));
+			.border-radius(50px, 50px, 50px, 50px);
+		}
+		p {
+			font-size:12px;
+			margin-top:5px;
+		}
+	}
+}
+
+.region-buttons {
+	position:relative;
+	z-index:1;
+	
+	ul {
+		.displayFlex();
+		list-style:none;
+		padding:0;
+		margin:0;
+		.box-shadow(0px 5px 10px 0px rgba(0,0,0,0.05));
+
+		li {
+			text-align:center;
+			position:relative;
+			width:100% / 6;
+
+			a {
+				display:block;
+				padding:30px 0;
+				background:@white;
+				border-left:1px solid @light-grey;
+				border-top:1px solid @light-grey;
+				font-size:20px;
+				color:@ideagen-blue;
+				height:100%;
+
+				&:hover {
+					color: darken(@ideagen-blue, 40%);
+					background: @menu-hover-blue;
+				}
+			}
+		}
+	}
+}
+
+
+.region-section {
+	background:@light-grey;
+	padding:100px 0 0;
+
+	.heading-container {
+		h1 {
+			display:inline-block;
+			background:@light-grey;
+			padding:0 14px;
+			.border-radius(5px, 5px, 5px, 5px)
+		}
+	}
+	
+	.card-vertical--icon {
+		width: auto;
+		max-width: 120px;
+		height:auto;
+		max-height: 60px;
+	}
+
+	.card-vertical--link a {
+		text-decoration: none;
+	}
+
+	.customer-logos-strip {
+		padding:10px 0;
+		background:@white;
+		margin-top:100px;
+		text-align:center;
+		.box-shadow(0px 0px 15px 0px rgba(0,0,0,0.1));
+		position:relative;
+		z-index:1;
+
+			img {
+				max-width:110px;
+				max-height:30px;
+
+				margin:5px 15px;
+			}
+	}
+
+	.customer-logos-list {
+		list-style:none;
+		margin:0;
+		padding:0;
+		overflow:auto;
+
+		li {
+			margin:5px 10px;
+			float:left;
+
+
+		}
+	}
+
+	&--eu {
+		background-image:url("../img/aviation-main-page/europe-map-background.svg");
+		background-position: top right;
+		background-repeat:no-repeat;
+	}
+	&--na {
+		background-image:url("../img/aviation-main-page/north-america-map-background.svg");
+		background-position: top left;
+		background-repeat:no-repeat;
+	}
+	&--afr {
+		background-image:url("../img/aviation-main-page/africa-map-background.svg");
+		background-position: top right;
+		background-repeat:no-repeat;
+	}
+	&--sea {
+		background-image:url("../img/aviation-main-page/south-east-asia-map-background.svg");
+		background-position: top left;
+		background-repeat:no-repeat;
+	}
+	&--swa {
+		background-image:url("../img/aviation-main-page/south-west-asia-map-background.svg");
+		background-position: top right;
+		background-repeat:no-repeat;
+	}
+	&--oce {
+		background-image:url("../img/aviation-main-page/oceania-map-background.svg");
+		background-position: top left;
+		background-repeat:no-repeat;
+	}
+}
+
+#oceania {
+	overflow:hidden; // Applied due to there being only 2 boxes and needing to offset the container to centre them.
+}
+
 
 // -----------------------------------------------------------------------------------
 // ----------------------------- STANDARD PAGE HEADERS -------------------------------
