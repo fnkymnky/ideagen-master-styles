@@ -1,39 +1,39 @@
 #content {
 	nav.sitemap {
-		
-		flex-direction: row;
-
+		margin-top:40px;
+		// All Items
+		ul {
+			list-style:none;
+			line-height:20px;
+		}
 		// 1st Level
 		> ul {
-			display:flex;
-			flex-wrap: wrap;
+			padding:0;
 
-			> li > a {
-				font-weight:bold;
-				margin: 10px 0 5px;
-				display:block;
-			}
+			> li {
+				margin:4px 0;
+				background: @menu-hover-blue;
+				padding:5px 5px 5px 5px;
 
-			li {
-				font-size:14px;
-				list-style:none;
-				padding-left:0;
+				 > a {
+					font-weight:bold;
+					margin: 10px 0 10px 15px;
+					display:block;
+				}
 
 				// 2nd Level
-				ul {
-					list-style:none;
-					padding-left:0;
-					margin-bottom:0;
-
-					li {
-						font-size:10px;
-
-						// 3rd Level
-						ul {
-							padding-left:14px;
-							margin-bottom:0px;
-						}
+				> ul {
+					columns:1;
+					@media (min-width:768px) {
+						columns:3;
 					}
+
+					padding:0 30px 15px;
+					margin:0;
+					> li {
+						font-size:14px;
+						margin:5px 0;
+					} 
 				}
 			}
 		}
