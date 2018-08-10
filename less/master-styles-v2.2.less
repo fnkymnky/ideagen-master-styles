@@ -502,6 +502,44 @@ body {
 	font-weight:300;
 }
 
+// -----------------------------------------------------------------------------------
+// ---------------------------------- PAGINATION -------------------------------------
+// -----------------------------------------------------------------------------------
+
+.pagination-nav{
+	.pagination-arrow{
+		font-size: 24px;
+		line-height: 16px;
+		padding-bottom: 12px;
+	}
+
+	.pagination{
+
+		li{
+			a{
+				color:#333;
+			}
+		}
+
+		.active{
+			a{
+				color:#fff;
+				background-color: @ideagen-blue;
+    			border-color: @ideagen-blue;
+			}
+		}
+	}
+
+	.pagination>li:last-child>a, .pagination>li:last-child>span {
+	    border-top-right-radius: 0;
+	    border-bottom-right-radius: 0;
+	}
+
+	.pagination>li:first-child>a, .pagination>li:first-child>span {
+	    border-top-left-radius: 0;
+	    border-bottom-left-radius: 0;
+	}
+}
 
 // -----------------------------------------------------------------------------------
 // ---------------------------- RESPONSIVE BREAKPOINTS -------------------------------
