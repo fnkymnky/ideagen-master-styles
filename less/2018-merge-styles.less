@@ -26,7 +26,7 @@
 
 .qpulse-illustration {
     margin-bottom: 20px;
-    max-height:250px;
+    max-height:180px;
     min-height: 120px;
 }
 
@@ -55,6 +55,76 @@
     margin-bottom: 30px;
 }
 
+.form-with-validation {
+    
+    // Form Fields
+    input[type="text"], 
+    input[type="email"],
+    input[type="tel"],
+    select {
+        &.error {
+            background:@error-background;
+            border:1px solid @error-border;
+            color:@error-color;
+        }
+        &.valid {
+            background:@success-background;
+            border:1px solid @success-border;
+            color:@success-color;
+        }
+    }
+
+    // Form Validation
+    .has-success {
+        position:relative;
+        &:before {
+            content:"\f00c";
+            font-family: @font-awesome;
+            font-size:10px;
+            padding:4px;
+            color:@white;
+            background:@success-color;
+            border:2px solid @white;
+            .border-radius(15px,15px,15px,15px);
+            display:block;
+            position:absolute;
+            top:14px;
+            right:29px;
+            line-height:1;
+            z-index:10;
+        }
+    }
+    .help-block {
+        font-size:10px;
+
+        &.form-error {
+            position:absolute;
+            background:rgba(0,0,0,0.6);
+            padding:4px 8px;
+            .border-radius(5px,5px,5px,5px);
+            color:@white;
+            z-index:10;
+            top:-16px;
+            right:25px;
+        }
+    }
+
+    &--labels-visible {
+        .has-success {
+            &:before {
+                top:41px;
+            }
+        }
+        .help-block {
+            font-size: 12px;
+
+            &.form-error {
+                top: -6px;
+                right: 15px;
+            }
+        }
+    }
+}
 
 // Old Solution Pages/Default Company Pages, etc
 #tx-standard-header {

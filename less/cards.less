@@ -387,8 +387,356 @@
 	}
 }
 
+.card-form {
+	background: white;
+	.border-radius(8px, 8px, 8px, 8px);
+	.box-shadow(0px 3px 30px 0px rgba(10,50,84,0.1));
 
+	@media(min-width: @media-breakpoint-md) {
+		> .row {
+			display: flex;
+			flex-direction: row;
+		}
+	}
 
+	&__main {
+		padding: 20px;
+		@media(min-width: @media-breakpoint-sm) {
+			padding: 30px;
+		}
+		
+		h1 {
+			margin-top: 0;
+			margin-bottom: 14px;
+			font-weight: bold;
+			font-size: 28px;
+			@media(min-width: @media-breakpoint-sm) {
+				font-size: 38px;
+			}
+		}
+
+		p {
+			font-size: 14px;
+		}
+
+		&__form {
+			max-width: 500px;
+
+			label {
+				padding-left: 5px;
+				font-size: 14px;
+			}
+
+			.form-group {
+				margin-bottom: 10px;
+
+				input, select {
+					.border-radius(30px, 30px, 30px, 30px);
+					height: 50px;
+				}
+			}
+
+			input[type="submit"].btn {
+				.border-radius(40px, 40px, 40px, 40px);
+				padding: 16px 30px;
+				margin-top: 10px;
+				margin-bottom: 14px;
+				color: white;
+				background:@ideagen-blue;
+				width: 100%;
+
+				@media(min-width: @media-breakpoint-sm){
+					width: auto;
+				}
+
+				&:hover {
+					background: darken(@ideagen-blue, 10%);
+				}
+				&:focus {
+					background: darken(@ideagen-blue, 15%);
+				}
+			}
+		}
+
+		p.smallprint {
+			font-size: 11px;
+			font-family: @roboto;
+			color: @dark-grey;
+			margin-bottom: 0;
+		}
+
+	}
+
+	&__quote {
+		display: none;
+	}
+
+	@media(min-width: @media-breakpoint-sm) {
+		&__quote {
+			display: flex;
+	    	flex-direction: column;
+			justify-content: center;
+			position: relative;
+			padding:20px 0 20px 0;
+			.border-radius(0, 0, 8px, 8px);
+
+			@media(min-width: @media-breakpoint-md) {
+				.border-radius(0px, 8px, 0, 8px);
+			}
+
+			&__brand-overlay {
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				background: rgba(10, 50, 84, 0.8);
+				.border-radius(0, 0, 8px, 8px);
+
+				@media(min-width: @media-breakpoint-md) {
+					.border-radius(0px, 8px, 0, 8px);
+				}
+			}
+
+			&__content {
+				position: relative;
+				z-index: 1;
+				color: white;
+
+				&__customer-logo {
+					background: white;
+					.border-radius(8px, 8px, 8px, 8px);
+					padding: 20px;
+					display: inline-block;
+
+					img {
+						width: 100%;
+						max-width: 200px!important;
+						max-height: 180px;
+					}
+				}
+
+				blockquote {
+					text-align: center;
+					margin: 0 15px;
+					@media(min-width: @media-breakpoint-sm) {
+						margin: 30px;
+					}
+
+					p {
+						font-size: 18px;
+						font-style: italic;
+						color: white;
+						line-height: 1.4;
+					}
+				}
+			}
+		}
+	}
+}
+
+.card-static-content {
+	background: white;
+	.border-radius(8px, 8px, 8px, 8px);
+	.box-shadow(0px 3px 30px 0px rgba(10,50,84,0.1));
+	padding: 20px;
+	@media(min-width: @media-breakpoint-sm) {
+		padding: 30px;
+	}
+
+	&__check-icon {
+		width: 150px;
+		margin-bottom: 20px;
+	}
+
+	h1 {
+		margin-top: 0;
+		margin-bottom: 14px;
+		font-weight: bold;
+		font-size: 28px;
+		@media(min-width: @media-breakpoint-sm) {
+			font-size: 38px;
+		}
+	}
+
+	p {
+		font-size: 14px;
+	}
+}
+
+.demo-request-customer-logo-list {
+	display: -ms-grid;
+	display: grid;
+	align-items: center;
+	grid-gap: 20px;
+	margin-top: 40px;
+	margin-bottom: 20px;
+	-ms-grid-columns: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
+
+	@media(min-width: @media-breakpoint-sm) {
+		-ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+		&__logo:nth-child(1) {
+			-ms-grid-column: 1;
+  			-ms-grid-row: 1;
+		}
+		&__logo:nth-child(2) {
+			-ms-grid-column: 2;
+  			-ms-grid-row: 1;
+		}
+		&__logo:nth-child(3) {
+			-ms-grid-column: 3;
+  			-ms-grid-row: 1;
+		}
+		&__logo:nth-child(4) {
+			-ms-grid-column: 4;
+  			-ms-grid-row: 1;
+		}
+		&__logo:nth-child(5) {
+			-ms-grid-column: 5;
+  			-ms-grid-row: 1;
+		}
+		&__logo:nth-child(6) {
+			-ms-grid-column: 1;
+  			-ms-grid-row: 2;
+		}
+		&__logo:nth-child(7) {
+			-ms-grid-column: 2;
+  			-ms-grid-row: 2;
+		}
+		&__logo:nth-child(8) {
+			-ms-grid-column: 3;
+  			-ms-grid-row: 2;
+		}
+	}
+
+	@media(min-width: @media-breakpoint-md) {
+		-ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+		-ms-grid-rows: 1fr;
+
+		&__logo:nth-child(1) {
+			-ms-grid-column: 1;
+  			-ms-grid-row: 1;
+		}
+		&__logo:nth-child(2) {
+			-ms-grid-column: 2;
+  			-ms-grid-row: 1;
+		}
+		&__logo:nth-child(3) {
+			-ms-grid-column: 3;
+  			-ms-grid-row: 1;
+		}
+		&__logo:nth-child(4) {
+			-ms-grid-column: 4;
+  			-ms-grid-row: 1;
+		}
+		&__logo:nth-child(5) {
+			-ms-grid-column: 5;
+  			-ms-grid-row: 1;
+		}
+		&__logo:nth-child(6) {
+			-ms-grid-column: 6;
+  			-ms-grid-row: 1;
+		}
+		&__logo:nth-child(7) {
+			-ms-grid-column: 7;
+  			-ms-grid-row: 1;
+		}
+		&__logo:nth-child(8) {
+			-ms-grid-column: 8;
+  			-ms-grid-row: 1;
+		}
+	}
+
+	&__logo {
+		width: 100%;
+		text-align: center;
+
+		img {
+			max-width: 100%;
+			max-height: 50px;
+		}
+	}
+}
+
+// =====================
+// Q-Pulse Branded Form
+// =====================
+.card-form--q-pulse {
+	input[type="submit"].btn {
+		background:@qpulse-purple;
+
+		&:hover {
+			background: darken(@qpulse-purple, 10%);
+		}
+		&:focus {
+			background: darken(@qpulse-purple, 15%);
+		}
+	}
+	.card-form__quote__brand-overlay {
+		background: rgba(85, 41, 136, 0.8);
+	}
+}
+
+// =====================
+// Pentana Branded Form
+// =====================
+.card-form--pentana {
+	input[type="submit"].btn {
+		background:@pentana-blue;
+
+		&:hover {
+			background: darken(@pentana-blue, 10%);
+		}
+		&:focus {
+			background: darken(@pentana-blue, 15%);
+		}
+	}
+	.card-form__quote__brand-overlay {
+		background: rgba(40, 75, 143, 0.8);
+	}
+}
+
+// =====================
+// PleaseReview Branded Form
+// =====================
+.card-form--pleasereview {
+	input[type="submit"].btn {
+		background:@pleasereview-yellow;
+
+		&:hover {
+			background: darken(@pleasereview-yellow, 10%);
+		}
+		&:focus {
+			background: darken(@pleasereview-yellow, 15%);
+		}
+	}
+	.card-form__quote__brand-overlay {
+		background: rgba(227, 174, 54, 0.8);
+	}
+}
+
+// =====================
+// Coruson Branded Form
+// =====================
+.card-form--coruson {
+	input[type="submit"].btn {
+		background:@coruson-blue;
+
+		&:hover {
+			background: darken(@coruson-blue, 10%);
+		}
+		&:focus {
+			background: darken(@coruson-blue, 15%);
+		}
+	}
+	.card-form__quote__brand-overlay {
+		background: rgba(0, 131, 193, 0.8);
+	}
+}
 
 // -----------------------------------------------------------------------------------
 // ---------- Card List Widgets (used on homepage and in page widgets) ---------------
